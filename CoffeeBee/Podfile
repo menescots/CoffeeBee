@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'CoffeeBee' do
+  # Comment the next line if you don't want to use dynamic frameworks
+    pod 'MagicTimer'
+    pod 'lottie-ios'
+  use_frameworks!
+
+  # Pods for CoffeeBee
+
+  target 'CoffeeBeeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CoffeeBeeUITests' do
+    # Pods for testing
+  end
+
+end

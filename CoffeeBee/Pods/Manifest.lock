@@ -1,0 +1,20 @@
+PODS:
+  - lottie-ios (3.4.1)
+  - MagicTimer (1.0.4)
+
+DEPENDENCIES:
+  - lottie-ios
+  - MagicTimer
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - MagicTimer
+
+SPEC CHECKSUMS:
+  lottie-ios: 016449b5d8be0c3dcbcfa0a9988469999cd04c5d
+  MagicTimer: e39ab4d63c759eed0cee34f521002f099bdcc472
+
+PODFILE CHECKSUM: 2240270d4930b02652b2c1097dd7c87b4cf1cd70
+
+COCOAPODS: 1.11.3

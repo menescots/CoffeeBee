@@ -1,0 +1,6 @@
+framework module Pods_CoffeeBee_CoffeeBeeUITests {
+  umbrella header "Pods-CoffeeBee-CoffeeBeeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
