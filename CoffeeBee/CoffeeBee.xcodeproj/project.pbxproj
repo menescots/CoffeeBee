@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		59EE2E6DF27AEAA393FD4AED /* Pods_CoffeeBee_CoffeeBeeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEB92938F51C8B9244CB83B /* Pods_CoffeeBee_CoffeeBeeUITests.framework */; };
+		7E6045FD28B61CF200E3D044 /* SelectedCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6045FC28B61CF100E3D044 /* SelectedCoffeeViewController.swift */; };
+		7E60460128B65FBC00E3D044 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60460028B65FBB00E3D044 /* Extensions.swift */; };
+		7E60460528B788E300E3D044 /* PreparingForCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60460428B788E300E3D044 /* PreparingForCoffeeVC.swift */; };
+		7E60461128B7B09100E3D044 /* coffeeImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E60461028B7B09100E3D044 /* coffeeImg.png */; };
 		7EAD2E8328B4D1A400EFDDC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2E8228B4D1A400EFDDC4 /* AppDelegate.swift */; };
 		7EAD2E8528B4D1A400EFDDC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2E8428B4D1A400EFDDC4 /* SceneDelegate.swift */; };
 		7EAD2E8A28B4D1A400EFDDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EAD2E8828B4D1A400EFDDC4 /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 		3BEB92938F51C8B9244CB83B /* Pods_CoffeeBee_CoffeeBeeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeBee_CoffeeBeeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E7DDECCFB69229D2E54D01 /* Pods-CoffeeBeeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeBeeTests.release.xcconfig"; path = "Target Support Files/Pods-CoffeeBeeTests/Pods-CoffeeBeeTests.release.xcconfig"; sourceTree = "<group>"; };
 		6AD5CBE46F4CF7EDD31766E0 /* Pods_CoffeeBeeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeBeeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6045FC28B61CF100E3D044 /* SelectedCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCoffeeViewController.swift; sourceTree = "<group>"; };
+		7E60460028B65FBB00E3D044 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		7E60460428B788E300E3D044 /* PreparingForCoffeeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparingForCoffeeVC.swift; sourceTree = "<group>"; };
+		7E60461028B7B09100E3D044 /* coffeeImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffeeImg.png; sourceTree = "<group>"; };
 		7EAD2E7F28B4D1A400EFDDC4 /* CoffeeBee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeBee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAD2E8228B4D1A400EFDDC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EAD2E8428B4D1A400EFDDC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 				7EAD2E8428B4D1A400EFDDC4 /* SceneDelegate.swift */,
 				7EAD2E8B28B4D1AF00EFDDC4 /* Assets.xcassets */,
 				7EAD2E8228B4D1A400EFDDC4 /* AppDelegate.swift */,
+				7E60461028B7B09100E3D044 /* coffeeImg.png */,
 				7EAD2E8828B4D1A400EFDDC4 /* Main.storyboard */,
 				7EAD2E8D28B4D1AF00EFDDC4 /* LaunchScreen.storyboard */,
 				7EAD2E9028B4D1AF00EFDDC4 /* Info.plist */,
@@ -168,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */,
+				7E6045FC28B61CF100E3D044 /* SelectedCoffeeViewController.swift */,
+				7E60460428B788E300E3D044 /* PreparingForCoffeeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 		7EF8D4AA28B4DEE90083133A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7E60460028B65FBB00E3D044 /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -312,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAD2E8F28B4D1AF00EFDDC4 /* LaunchScreen.storyboard in Resources */,
+				7E60461128B7B09100E3D044 /* coffeeImg.png in Resources */,
 				7EAD2E8C28B4D1AF00EFDDC4 /* Assets.xcassets in Resources */,
 				7EAD2E8A28B4D1A400EFDDC4 /* Main.storyboard in Resources */,
 			);
@@ -442,9 +455,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EAD2E8328B4D1A400EFDDC4 /* AppDelegate.swift in Sources */,
+				7E60460128B65FBC00E3D044 /* Extensions.swift in Sources */,
 				7EF8D4B028B4F4490083133A /* BrewMethodsViewController.swift in Sources */,
 				7EAD2E8528B4D1A400EFDDC4 /* SceneDelegate.swift in Sources */,
 				7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */,
+				7E60460528B788E300E3D044 /* PreparingForCoffeeVC.swift in Sources */,
+				7E6045FD28B61CF200E3D044 /* SelectedCoffeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
