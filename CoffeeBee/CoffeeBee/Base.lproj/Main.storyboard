@@ -123,6 +123,124 @@
             </objects>
             <point key="canvasLocation" x="-1265.217391304348" y="1408.9285714285713"/>
         </scene>
+        <!--Preparing For CoffeeVC-->
+        <scene sceneID="ZZQ-wI-EeT">
+            <objects>
+                <viewController storyboardIdentifier="preapreCoffeeVc" id="1gY-Db-D2O" customClass="PreparingForCoffeeVC" customModule="CoffeeBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEM-of-Rmo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="h2u-pk-NEP">
+                                <rect key="frame" x="31" y="326" width="352" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-WG-Gwa">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee-beans" translatesAutoresizingMaskIntoConstraints="NO" id="s5o-pV-z4S">
+                                        <rect key="frame" x="136" y="0.0" width="80" height="80"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thermometer" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-fw-fcU">
+                                        <rect key="frame" x="272" y="0.0" width="80" height="80"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="eF9-DO-Ycw">
+                                <rect key="frame" x="53" y="108" width="292" height="90.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Art-K4-eFc">
+                                        <rect key="frame" x="115" y="0.0" width="62.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="27"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="250" minValue="250" maxValue="1250" translatesAutoresizingMaskIntoConstraints="NO" id="Hdl-zk-b7j">
+                                        <rect key="frame" x="-2" y="60.5" width="296" height="31"/>
+                                        <color key="thumbTintColor" name="labelColor"/>
+                                        <connections>
+                                            <action selector="sliderValueDidChange:" destination="1gY-Db-D2O" eventType="valueChanged" id="aRS-0P-A6h"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hdl-zk-b7j" firstAttribute="leading" secondItem="eF9-DO-Ycw" secondAttribute="leadingMargin" id="R8Z-Hz-ZdQ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="w6v-Bh-ykn">
+                                <rect key="frame" x="31" y="426" width="342.5" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPh-82-aZk">
+                                        <rect key="frame" x="0.0" y="0.0" width="81.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5N-zS-AvN">
+                                        <rect key="frame" x="130.5" y="0.0" width="81.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56J-56-SMg">
+                                        <rect key="frame" x="261" y="0.0" width="81.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eog-Qg-e7K">
+                                <rect key="frame" x="5" y="459" width="395.5" height="23"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="250" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQX-nU-Jb0">
+                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="DT3-ur-qAf">
+                                        <rect key="frame" x="133.5" y="0.0" width="128.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="97C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFJ-4R-baV">
+                                        <rect key="frame" x="267" y="0.0" width="128.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                        <color key="textColor" name="labelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DWO-UK-Asb"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="w6v-Bh-ykn" firstAttribute="top" secondItem="h2u-pk-NEP" secondAttribute="bottom" constant="20" id="126-Ny-rcV"/>
+                            <constraint firstItem="w6v-Bh-ykn" firstAttribute="centerX" secondItem="eog-Qg-e7K" secondAttribute="centerX" id="3nJ-6A-5oX"/>
+                            <constraint firstItem="DWO-UK-Asb" firstAttribute="trailing" secondItem="eF9-DO-Ycw" secondAttribute="trailing" constant="69" id="Ids-8l-Kt6"/>
+                            <constraint firstItem="eF9-DO-Ycw" firstAttribute="top" secondItem="DWO-UK-Asb" secondAttribute="top" constant="20" id="UGP-aj-fbh"/>
+                            <constraint firstItem="iQX-nU-Jb0" firstAttribute="width" secondItem="FEM-of-Rmo" secondAttribute="width" multiplier="0.11715" constant="80" id="fWg-MI-EqJ"/>
+                            <constraint firstItem="DWO-UK-Asb" firstAttribute="bottom" secondItem="eog-Qg-e7K" secondAttribute="bottom" constant="380" id="gUf-Nw-7Ur"/>
+                            <constraint firstItem="h2u-pk-NEP" firstAttribute="centerX" secondItem="FEM-of-Rmo" secondAttribute="centerX" id="i0l-xy-WSS"/>
+                            <constraint firstItem="eog-Qg-e7K" firstAttribute="top" secondItem="w6v-Bh-ykn" secondAttribute="bottom" constant="16" id="mXA-Mo-q35"/>
+                            <constraint firstItem="eF9-DO-Ycw" firstAttribute="leading" secondItem="DWO-UK-Asb" secondAttribute="leading" constant="53" id="sd8-Yw-6Rl"/>
+                            <constraint firstItem="h2u-pk-NEP" firstAttribute="leading" secondItem="w6v-Bh-ykn" secondAttribute="leading" id="tZ3-eg-3FI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tEP-Iy-8lK"/>
+                    <connections>
+                        <outlet property="CoffeNameLabel" destination="Art-K4-eFc" id="Xwc-2U-6l6"/>
+                        <outlet property="coffeeValueLabel" destination="DT3-ur-qAf" id="OhZ-d9-c7h"/>
+                        <outlet property="temperatureLabel" destination="gFJ-4R-baV" id="ORy-bf-MSV"/>
+                        <outlet property="uiSlider" destination="Hdl-zk-b7j" id="EY4-cA-RLL"/>
+                        <outlet property="waterValueLabel" destination="iQX-nU-Jb0" id="PNU-VP-2b5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQA-WZ-raq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359.4202898550725" y="2140.8482142857142"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mv9-Ty-a9y">
             <objects>
@@ -221,20 +339,41 @@
             </objects>
             <point key="canvasLocation" x="510" y="694"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Phr-gv-fad">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nzu-UZ-h9A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="syU-Wi-AUO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1gY-Db-D2O" kind="relationship" relationship="rootViewController" id="5Fd-6S-OIM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNE-lN-qGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1269.5652173913045" y="2140.8482142857142"/>
+        </scene>
     </scenes>
     <color key="tintColor" name="labelColor"/>
     <resources>
+        <image name="coffee-beans" width="80" height="80"/>
         <image name="cup.and.saucer" catalog="system" width="128" height="91"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="thermometer" width="80" height="80"/>
+        <image name="water" width="80" height="80"/>
         <namedColor name="BackgroundColor">
             <color red="0.85882352941176465" green="0.85098039215686272" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="labelColor">
-            <color red="0.34253607855902779" green="0.26721560022340307" blue="0.2073712627229935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.3411764705882353" green="0.26666666666666666" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarIcons">
-            <color red="0.57345488577178028" green="0.44042994832423654" blue="0.31074242263196639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.5725490196078431" green="0.4392156862745098" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

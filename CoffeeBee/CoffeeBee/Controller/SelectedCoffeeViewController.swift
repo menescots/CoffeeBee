@@ -64,10 +64,12 @@ class SelectedCoffeeViewController: UIViewController {
     }
 
     @objc private func makeThisCoffeeButtonTapped() {
-        let vc = PreparingForCoffeeVC()
-        vc.coffeeToPrepare = selectedCoffeeName
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let newView = storyBoard.instantiateViewController(withIdentifier: "preapreCoffeeVc") as! PreparingForCoffeeVC
+        newView.hidesBottomBarWhenPushed = true
+        newView.coffeeToPrepare = selectedCoffeeName
+        self.navigationController?.pushViewController(newView, animated: true)
+        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
