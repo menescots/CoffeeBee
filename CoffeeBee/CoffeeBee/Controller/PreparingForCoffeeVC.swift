@@ -30,6 +30,11 @@ class PreparingForCoffeeVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "BackgroundColor")
         CoffeNameLabel.text = coffeeToPrepare
+        
+        guard let coffeeToPrepare = coffeeToPrepare else {
+            return
+        }
+        calculateWaterCoffeeRatio(selectedCoffee: coffeeToPrepare, water: 250)
     }
     
     @IBAction func sliderValueDidChange(_ sender: UISlider) {
@@ -41,32 +46,68 @@ class PreparingForCoffeeVC: UIViewController {
         }
         calculateWaterCoffeeRatio(selectedCoffee: coffeeToPrepare, water: intSliderValue)
         highlightNumberOfCups(water: intSliderValue)
-        waterValueLabel.text = String(sender.value)
         
     }
     
     private func calculateWaterCoffeeRatio(selectedCoffee: String, water: Int) {
         switch selectedCoffee {
         case "Turkish coffee":
-            coffeeValueLabel.text = String(water/12)
-        case "Moka pot":
-            coffeeValueLabel.text = String(water/12)
+            calculateTempAndCoffee(water: water, celsius: 70, ratio: 12)
+        case "Moka Pot":
+            calculateTempAndCoffee(water: water, celsius: 95, ratio: 12)
         case "French press ":
-            coffeeValueLabel.text = String(water/15)
+            calculateTempAndCoffee(water: water, celsius: 94, ratio: 15)
         case "AeroPress":
-            coffeeValueLabel.text = String(water/16)
+            calculateTempAndCoffee(water: water, celsius: 90, ratio: 16)
         case "Syphon":
-            coffeeValueLabel.text = String(water/15)
+            calculateTempAndCoffee(water: water, celsius: 90, ratio: 15)
         case "Cold Brew":
-            coffeeValueLabel.text = String(water/8)
+            calculateTempAndCoffee(water: water, celsius: 20, ratio: 8)
         case "Chemex":
-            coffeeValueLabel.text = String(water/15)
+            calculateTempAndCoffee(water: water, celsius: 94, ratio: 15)
         case "Hario V60":
-            coffeeValueLabel.text = String(water/15)
+            calculateTempAndCoffee(water: water, celsius: 92, ratio: 15)
         case "Espresso":
-            coffeeValueLabel.text = String(water/2)
+            calculateTempAndCoffee(water: water, celsius: 70, ratio: 2)
         default:
             return
+        }
+    }
+    
+    private func calculateTempAndCoffee(water: Int, celsius: Double, ratio: Double) {
+        let selectedTempUnit = UserDefaults.standard.value(forKey: "tempUnit")
+        let selectedWeightUnit = UserDefaults.standard.value(forKey: "weightUnit")
+        let coffeeGrams = Double(water) / ratio
+        
+        guard let selectedTempUnit = selectedTempUnit as? String,
+                let selectedWeightUnit = selectedWeightUnit as? String else {
+            return
+        }
+
+        switch selectedTempUnit {
+        case "Celsius":
+            temperatureLabel.text = String("\(celsius)C")
+        case "Fahrenheit":
+            let temp = celsius * 1.8 + 32
+            temperatureLabel.text = String("\(temp)F")
+        default:
+            break
+            
+        }
+        
+        switch selectedWeightUnit {
+        case "Grams":
+            coffeeValueLabel.text = String("\(coffeeGrams.roundTo(places: 2))g")
+            waterValueLabel.text = String("\(water)ml")
+        case "Ounces":
+            let coffeeOuncesLong = coffeeGrams/28.34952
+            let coffeeOunces = coffeeOuncesLong.roundTo(places: 2)
+            let waterInOunces = Double(water)*0.033814
+            
+            coffeeValueLabel.text = String("\(coffeeOunces)oz")
+            waterValueLabel.text = String("\(waterInOunces.roundTo(places: 2))fl oz")
+        default:
+            break
         }
     }
     

@@ -19,6 +19,7 @@
 		7EAD2E9A28B4D1B000EFDDC4 /* CoffeeBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2E9928B4D1B000EFDDC4 /* CoffeeBeeTests.swift */; };
 		7EAD2EA428B4D1B000EFDDC4 /* CoffeeBeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */; };
 		7EAD2EA628B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */; };
+		7EEC9AD128BCA78D00B4540A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */; };
 		7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */; };
 		7EF8D4B028B4F4490083133A /* BrewMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */; };
 		85829336AEB7D308C413B25E /* Pods_CoffeeBeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD5CBE46F4CF7EDD31766E0 /* Pods_CoffeeBeeTests.framework */; };
@@ -62,6 +63,7 @@
 		7EAD2E9F28B4D1B000EFDDC4 /* CoffeeBeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITests.swift; sourceTree = "<group>"; };
 		7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMethodsViewController.swift; sourceTree = "<group>"; };
 		85A406876B171A35CEBD19ED /* Pods-CoffeeBeeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeBeeTests.debug.xcconfig"; path = "Target Support Files/Pods-CoffeeBeeTests/Pods-CoffeeBeeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */,
 				7E6045FC28B61CF100E3D044 /* SelectedCoffeeViewController.swift */,
 				7E60460428B788E300E3D044 /* PreparingForCoffeeVC.swift */,
+				7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */,
 				7E60460528B788E300E3D044 /* PreparingForCoffeeVC.swift in Sources */,
 				7E6045FD28B61CF200E3D044 /* SelectedCoffeeViewController.swift in Sources */,
+				7EEC9AD128BCA78D00B4540A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
