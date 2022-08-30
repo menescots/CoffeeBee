@@ -23,10 +23,25 @@ class PreparingForCoffeeVC: UIViewController {
     @IBOutlet var twoCups: UILabel!
     @IBOutlet var threeCups: UILabel!
     
+    @IBOutlet var methodLabel: UILabel!
+    @IBOutlet var rangeOfGrindLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "BackgroundColor")
-        CoffeNameLabel.text = coffeeToPrepare?.name
+        guard let coffeeToPrepare = coffeeToPrepare else {
+            return
+        }
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.unitsStyle = .abbreviated
+        let formattedString = formatter.string(from: TimeInterval(coffeeToPrepare.time))!
+ 
+        CoffeNameLabel.text = coffeeToPrepare.name
+        methodLabel.text = coffeeToPrepare.name
+        rangeOfGrindLabel.text = coffeeToPrepare.grindSize
+        timeLabel.text = formattedString
+        
         calculateTempAndCoffee(water: 250)
         highlightNumberOfCups(water: 250)
     }
@@ -61,7 +76,7 @@ class PreparingForCoffeeVC: UIViewController {
             temperatureLabel.text = String("\(coffeeTemperatureInCelsius)C")
         case "Fahrenheit":
             let temperatureInF = Double(coffeeTemperatureInCelsius) * 1.8 + 32
-            temperatureLabel.text = String("\(temperatureInF)F")
+            temperatureLabel.text = String("\(temperatureInF.roundTo(places: 0))F")
         default:
             break
             
