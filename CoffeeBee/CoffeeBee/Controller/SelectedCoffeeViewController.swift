@@ -9,9 +9,8 @@ import UIKit
 
 class SelectedCoffeeViewController: UIViewController {
     var selectedCoffeeImg: UIImage?
-    var selectedCoffeeName: String?
     var selectedCoffeeDesc: String?
-    
+    var selectedCoffeMethod: CoffeeMethods?
     private var coffeeImage: UIImageView = {
         let imageView = UIImageView()
         return imageView
@@ -53,9 +52,8 @@ class SelectedCoffeeViewController: UIViewController {
             return
         }
         coffeeImage.image = selectedCoffeeImg
-        coffeeNameLabel.text = selectedCoffeeName
+        coffeeNameLabel.text = selectedCoffeMethod?.name
         brewMethodDesc.text = selectedCoffeeDesc
-        
         view.addSubview(coffeeImage)
         view.addSubview(coffeeNameLabel)
         view.addSubview(brewMethodDesc)
@@ -65,10 +63,10 @@ class SelectedCoffeeViewController: UIViewController {
 
     @objc private func makeThisCoffeeButtonTapped() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let newView = storyBoard.instantiateViewController(withIdentifier: "preapreCoffeeVc") as! PreparingForCoffeeVC
-        newView.hidesBottomBarWhenPushed = true
-        newView.coffeeToPrepare = selectedCoffeeName
-        self.navigationController?.pushViewController(newView, animated: true)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "preapreCoffeeVc") as! PreparingForCoffeeVC
+        vc.hidesBottomBarWhenPushed = true
+        vc.coffeeToPrepare = selectedCoffeMethod
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     override func viewDidLayoutSubviews() {

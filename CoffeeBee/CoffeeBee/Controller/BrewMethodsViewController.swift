@@ -10,17 +10,16 @@ import UIKit
 class BrewMethodsViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
-    let coffeeMethods = [
-        "Turkish coffee",
-        "Moka Pot",
-        "French press",
-        "AeroPress",
-        "Syphon",
-        "Cold Brew",
-        "Chemex",
-        "Hario V60",
-        "Espresso",
-    ]
+    var coffeeMethods = [CoffeeMethods]()
+    let turkishCoffee = CoffeeMethods(name: "Turkish coffee", waterRatio: 12, grindSize: "Extra-fine", time: 10.0, temperatureInC: 70)
+    let mokaPot = CoffeeMethods(name: "Moka Pot", waterRatio: 12, grindSize: "Extra-fine", time: 3.5, temperatureInC: 95)
+    let frenchPress = CoffeeMethods(name: "French Press", waterRatio: 15, grindSize: "Extra-fine", time: 4.0, temperatureInC: 94)
+    let aeroPress = CoffeeMethods(name: "AeroPress", waterRatio: 10, grindSize: "Extra-fine", time: 2.5, temperatureInC: 90)
+    let syphon = CoffeeMethods(name: "Syphon", waterRatio: 15, grindSize: "Extra-fine", time: 2.5, temperatureInC: 90)
+    let coldBrew = CoffeeMethods(name: "Cold Brew", waterRatio: 8, grindSize: "Extra-fine", time: 960.0, temperatureInC: 20)
+    let chemex = CoffeeMethods(name: "Chemex", waterRatio: 15, grindSize: "Extra-fine", time: 5.0, temperatureInC: 94)
+    let harioV60 = CoffeeMethods(name: "Hario V60", waterRatio: 15, grindSize: "Extra-fine", time: 4.0, temperatureInC: 92)
+    let espresso = CoffeeMethods(name: "Espresso", waterRatio: 2, grindSize: "Extra-fine", time: 0.5, temperatureInC: 93)
     
     let coffeeMethodsImages: [UIImage] = [
         UIImage(named: "cezve")!,
@@ -48,6 +47,7 @@ class BrewMethodsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        coffeeMethods.append(contentsOf: [turkishCoffee, mokaPot,frenchPress, aeroPress, syphon, coldBrew, chemex, harioV60, espresso])
     }
 
 }
@@ -60,7 +60,7 @@ extension BrewMethodsViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CoffeeCell", for: indexPath) as! CollectionViewCell
-        cell.coffeeMethodLabel.text = coffeeMethods[indexPath.item]
+        cell.coffeeMethodLabel.text = coffeeMethods[indexPath.item].name
         cell.coffeeMethodImageView.image = coffeeMethodsImages[indexPath.item]
         
         return cell
@@ -85,8 +85,8 @@ extension BrewMethodsViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = SelectedCoffeeViewController()
         vc.selectedCoffeeImg = coffeeMethodsImages[indexPath.row]
-        vc.selectedCoffeeName = coffeeMethods[indexPath.row]
         vc.selectedCoffeeDesc = coffeeMethodDesc[indexPath.row]
+        vc.selectedCoffeMethod = coffeeMethods[indexPath.row]
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }
