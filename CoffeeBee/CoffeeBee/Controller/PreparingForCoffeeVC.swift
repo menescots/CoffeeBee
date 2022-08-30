@@ -98,6 +98,8 @@ class PreparingForCoffeeVC: UIViewController {
         }
     }
     
+    @IBAction func startButtonTapped(_ sender: Any) {
+    }
     private func highlightNumberOfCups(water: Int){
         
         if water % 250 == 0{
