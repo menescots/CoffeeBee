@@ -26,22 +26,30 @@ class PreparingForCoffeeVC: UIViewController {
     @IBOutlet var methodLabel: UILabel!
     @IBOutlet var rangeOfGrindLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = UIColor(named: "BackgroundColor")
         guard let coffeeToPrepare = coffeeToPrepare else {
             return
         }
+        
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.unitsStyle = .abbreviated
         let formattedString = formatter.string(from: TimeInterval(coffeeToPrepare.time))!
- 
+
+        let defaults = UserDefaults.standard
+        if defaults.value(forKey: "tempUnit") == nil || defaults.value(forKey: "weightUnit") == nil {
+            defaults.setValue("Celsius", forKey: "tempUnit")
+            defaults.setValue("Grams", forKey: "weightUnit")
+        }
+        
         CoffeNameLabel.text = coffeeToPrepare.name
         methodLabel.text = coffeeToPrepare.name
         rangeOfGrindLabel.text = coffeeToPrepare.grindSize
         timeLabel.text = formattedString
-        
         calculateTempAndCoffee(water: 250)
         highlightNumberOfCups(water: 250)
     }
@@ -50,7 +58,7 @@ class PreparingForCoffeeVC: UIViewController {
         let roundedStepValue = round(sender.value / step) * step
         sender.value = roundedStepValue
         let intSliderValue = Int(sender.value)
-        
+        print(sender.value)
         calculateTempAndCoffee(water: intSliderValue)
         highlightNumberOfCups(water: intSliderValue)
     }

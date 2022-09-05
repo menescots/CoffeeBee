@@ -383,7 +383,7 @@
                                     <constraint firstItem="01W-KA-wZC" firstAttribute="top" secondItem="Ege-b4-AiH" secondAttribute="top" id="Nf8-0T-Bwh"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx9-oO-ZKD">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx9-oO-ZKD">
                                 <rect key="frame" x="172" y="738" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Faa-No-L8c"/>
@@ -391,12 +391,15 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="" cornerStyle="capsule">
-                                    <imageReference key="image" image="play" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
                                     <color key="baseForegroundColor" name="BackgroundColor"/>
                                     <color key="baseBackgroundColor" name="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="1gY-Db-D2O" eventType="touchUpInside" id="A0s-aX-jw7"/>
+                                    <segue destination="S54-hy-U6q" kind="popoverPresentation" popoverAnchorView="wx9-oO-ZKD" id="FHJ-5J-jHp">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -442,6 +445,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQA-WZ-raq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-359.4202898550725" y="2140.8482142857142"/>
+        </scene>
+        <!--Making Coffee View Controller-->
+        <scene sceneID="JzC-ir-W1M">
+            <objects>
+                <viewController id="S54-hy-U6q" customClass="MakingCoffeeViewController" customModule="CoffeeBee" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIa-k6-3xi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ns0-ab-PP7"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kox-G0-KjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-375.36231884057975" y="2822.5446428571427"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mv9-Ty-a9y">
@@ -567,7 +585,7 @@
         <image name="cup.and.saucer" catalog="system" width="128" height="91"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
-        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="thermometer" width="80" height="80"/>
         <image name="water" width="80" height="80"/>
         <namedColor name="BackgroundColor">

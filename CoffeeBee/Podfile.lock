@@ -1,20 +1,24 @@
 PODS:
+  - HGCircularSlider (2.2.0)
   - lottie-ios (3.4.1)
   - MagicTimer (1.0.4)
 
 DEPENDENCIES:
+  - HGCircularSlider
   - lottie-ios
   - MagicTimer
 
 SPEC REPOS:
   trunk:
+    - HGCircularSlider
     - lottie-ios
     - MagicTimer
 
 SPEC CHECKSUMS:
+  HGCircularSlider: afb1942743a2df156dcc7a3500216e523e14266b
   lottie-ios: 016449b5d8be0c3dcbcfa0a9988469999cd04c5d
   MagicTimer: e39ab4d63c759eed0cee34f521002f099bdcc472
 
-PODFILE CHECKSUM: 2240270d4930b02652b2c1097dd7c87b4cf1cd70
+PODFILE CHECKSUM: 0ce9f997c1d3414ef56c2c3e6fa003ff28892095
 
 COCOAPODS: 1.11.3

@@ -5,6 +5,7 @@ target 'CoffeeBee' do
   # Comment the next line if you don't want to use dynamic frameworks
     pod 'MagicTimer'
     pod 'lottie-ios'
+    pod 'HGCircularSlider'
   use_frameworks!
 
   # Pods for CoffeeBee

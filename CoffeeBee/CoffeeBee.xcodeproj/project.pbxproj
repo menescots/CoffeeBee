@@ -21,6 +21,7 @@
 		7EAD2EA428B4D1B000EFDDC4 /* CoffeeBeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */; };
 		7EAD2EA628B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */; };
 		7ED3FFBB28BE42650012B1F3 /* playAnime.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3FFBA28BE42640012B1F3 /* playAnime.json */; };
+		7ED3FFBD28BF50A00012B1F3 /* MakingCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */; };
 		7EEC9AD128BCA78D00B4540A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */; };
 		7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */; };
 		7EF8D4B028B4F4490083133A /* BrewMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */; };
@@ -67,6 +68,7 @@
 		7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITests.swift; sourceTree = "<group>"; };
 		7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7ED3FFBA28BE42640012B1F3 /* playAnime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playAnime.json; sourceTree = "<group>"; };
+		7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingCoffeeViewController.swift; sourceTree = "<group>"; };
 		7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMethodsViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				7E6045FC28B61CF100E3D044 /* SelectedCoffeeViewController.swift */,
 				7E60460428B788E300E3D044 /* PreparingForCoffeeVC.swift */,
 				7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */,
+				7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				7E60460128B65FBC00E3D044 /* Extensions.swift in Sources */,
 				7EF8D4B028B4F4490083133A /* BrewMethodsViewController.swift in Sources */,
 				7E711DCF28BCF53B006DCF56 /* CoffeeMethods.swift in Sources */,
+				7ED3FFBD28BF50A00012B1F3 /* MakingCoffeeViewController.swift in Sources */,
 				7EAD2E8528B4D1A400EFDDC4 /* SceneDelegate.swift in Sources */,
 				7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */,
 				7E60460528B788E300E3D044 /* PreparingForCoffeeVC.swift in Sources */,

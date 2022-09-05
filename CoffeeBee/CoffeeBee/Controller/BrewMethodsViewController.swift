@@ -11,8 +11,9 @@ class BrewMethodsViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     var coffeeMethods = [CoffeeMethods]()
+    
+    let mokaPot = CoffeeMethods(name: "Moka Pot", waterRatio: 8, grindSize: "Fine", time: 210, temperatureInC: 95)
     let turkishCoffee = CoffeeMethods(name: "Turkish coffee", waterRatio: 12, grindSize: "Extra-fine", time: 600, temperatureInC: 70)
-    let mokaPot = CoffeeMethods(name: "Moka Pot", waterRatio: 12, grindSize: "Fine", time: 210, temperatureInC: 95)
     let frenchPress = CoffeeMethods(name: "French Press", waterRatio: 15, grindSize: "Coarse", time: 240, temperatureInC: 94)
     let aeroPress = CoffeeMethods(name: "AeroPress", waterRatio: 10, grindSize: "Fine", time: 150, temperatureInC: 90)
     let syphon = CoffeeMethods(name: "Syphon", waterRatio: 15, grindSize: "Medium", time: 150, temperatureInC: 90)
@@ -22,8 +23,8 @@ class BrewMethodsViewController: UIViewController {
     let espresso = CoffeeMethods(name: "Espresso", waterRatio: 2, grindSize: "Fine", time: 30, temperatureInC: 93)
     
     let coffeeMethodsImages: [UIImage] = [
-        UIImage(named: "cezve")!,
         UIImage(named: "mokapot")!,
+        UIImage(named: "cezve")!,
         UIImage(named: "frenchpress")!,
         UIImage(named: "aeropress")!,
         UIImage(named: "syphon")!,
@@ -34,8 +35,8 @@ class BrewMethodsViewController: UIViewController {
     ]
     
     private let coffeeMethodDesc = [
-    "Turkish coffee is a style of coffee prepared in a cezve using very finely ground coffee beans without filtering. Turkish coffee is a rich, thick, and delightful drink to be enjoyed slowly with good company.",
     "A compact Italian-made eight-sided wonder, the moka pot makes espresso-style coffee without the need for a large, expensive, high-maintenance machine. Invented in 1933 by Italian engineer Alfonso Bialetti.",
+    "Turkish coffee is a style of coffee prepared in a cezve using very finely ground coffee beans without filtering. Turkish coffee is a rich, thick, and delightful drink to be enjoyed slowly with good company.",
     "For French press coffee, the grinds stay in the bottom of the beaker throughout the entire process. Because the grinds remain in contact with the coffee, the bean extraction never ends, creating an oily and bold taste.",
     "The Aeropress is a piston-style brewer that forces coffee through a thin paper filter directly into a cup. Aeropress coffee has a clean taste with clearly defined flavor notes thanks to the paper filter that stops any oil and sediment from getting in the cup.",
     "Siphon (vacuum pot) coffee is a brewing method that involves a process of mixing coffee with boiling water ascended from the flask through siphonage to extract and filter the coffee.",
@@ -47,7 +48,7 @@ class BrewMethodsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coffeeMethods.append(contentsOf: [turkishCoffee, mokaPot,frenchPress, aeroPress, syphon, coldBrew, chemex, harioV60, espresso])
+        coffeeMethods.append(contentsOf: [mokaPot, turkishCoffee, frenchPress, aeroPress, syphon, coldBrew, chemex, harioV60, espresso])
     }
 
 }
