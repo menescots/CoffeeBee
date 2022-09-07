@@ -1,0 +1,18 @@
+{"methods": [
+    {
+    "name": "Moka Pot",
+    "desc": "A compact Italian-made eight-sided wonder, the moka pot makes espresso-style coffee without the need for a large, expensive, high-maintenance machine. Invented in 1933 by Italian engineer Alfonso Bialetti.",
+    "steps": [
+      { "timer": null, "step": "Preheat water_amount of water to temperature" },
+      { "timer": 10, "step": "Grind coffee_amount of coffee to grind_size size." },
+      { "timer": null, "step": "Fill the bottom chamber of Moka pot with water until is level with the valve, about water_amount." },
+      { "timer": null, "step": "Place the funnel into the pot." },
+      { "timer": null, "step": "Fill the funner with the ground coffee, leveling and wiping the funnel's rim clean. Do not tamp the grounds." },
+      { "timer": null, "step": "Screw the Moka pot's spouted top on tightly." },
+      { "timer": null, "step": "Place the Moka pot on a stove over medium heat. Make sure the flame is not larger than the base of the pot so as not to expose the handle to heat." },
+      { "timer": null, "step": "Wait couple minutes. You know when it's done when you hear hissing, gurgling sound. Remove Moka pot from the heat." },
+      { "timer": null, "step": "Enjoy your coffee." }
+    ]
+  }
+]
+}

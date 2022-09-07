@@ -9,13 +9,12 @@ import UIKit
 
 class SelectedCoffeeViewController: UIViewController {
     var selectedCoffeeImg: UIImage?
-    var selectedCoffeeDesc: String?
-    var selectedCoffeMethod: CoffeeMethods?
+    var selectedCoffeeMethod: CoffeeMethods?
+    var coffeeInfo: Method?
     private var coffeeImage: UIImageView = {
         let imageView = UIImageView()
         return imageView
     }()
-    
     private let coffeeNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 30, weight: .semibold)
@@ -52,20 +51,50 @@ class SelectedCoffeeViewController: UIViewController {
             return
         }
         coffeeImage.image = selectedCoffeeImg
-        coffeeNameLabel.text = selectedCoffeMethod?.name
-        brewMethodDesc.text = selectedCoffeeDesc
+        coffeeNameLabel.text = selectedCoffeeMethod?.name
         view.addSubview(coffeeImage)
         view.addSubview(coffeeNameLabel)
         view.addSubview(brewMethodDesc)
         view.addSubview(makeThisCoffeeButton)
         makeThisCoffeeButton.addTarget(self, action: #selector(makeThisCoffeeButtonTapped), for: .touchUpInside)
+        if let localData = self.readLocalFile(forName: "methods") {
+            self.parse(jsonData: localData)
+        }
     }
 
+    private func readLocalFile(forName name: String) -> Data? {
+        do {
+            if let bundlePath = Bundle.main.path(forResource: name,
+                                                 ofType: "json"),
+                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                return jsonData
+            }
+        } catch {
+            print(error)
+        }
+        return nil
+    }
+    
+    private func parse(jsonData: Data) {
+        do {
+            let decodedData = try JSONDecoder().decode(MethodList.self,
+                                                       from: jsonData)
+            coffeeInfo = decodedData.methods.first(where: {$0.name == selectedCoffeeMethod?.name})
+            guard let coffeeInfo = coffeeInfo else {
+                return
+            }
+
+            brewMethodDesc.text = coffeeInfo.desc
+        } catch {
+            print("decode error \(error)")
+        }
+    }
     @objc private func makeThisCoffeeButtonTapped() {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "preapreCoffeeVc") as! PreparingForCoffeeVC
         vc.hidesBottomBarWhenPushed = true
-        vc.coffeeToPrepare = selectedCoffeMethod
+        vc.coffeeToPrepare = selectedCoffeeMethod
+        vc.coffeeInfo = coffeeInfo
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -93,8 +122,8 @@ class SelectedCoffeeViewController: UIViewController {
         brewMethodDesc.center.x = self.view.center.x
         
         makeThisCoffeeButton.frame = CGRect(x: (view.frame.width-size)/2,
-                                            y: view.bottom-100,
-                                      width: 200,
+                                            y: view.bottom-80,
+                                      width: view.frame.size.width-20,
                                       height: 50)
         makeThisCoffeeButton.center.x = self.view.center.x
         

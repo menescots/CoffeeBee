@@ -397,7 +397,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButtonTapped:" destination="1gY-Db-D2O" eventType="touchUpInside" id="A0s-aX-jw7"/>
-                                    <segue destination="S54-hy-U6q" kind="popoverPresentation" popoverAnchorView="wx9-oO-ZKD" id="FHJ-5J-jHp">
+                                    <segue destination="S54-hy-U6q" kind="popoverPresentation" identifier="makeCoffeeSegue" popoverAnchorView="wx9-oO-ZKD" id="FHJ-5J-jHp">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -435,6 +435,7 @@
                         <outlet property="methodLabel" destination="pEh-C6-0en" id="M9A-3c-zky"/>
                         <outlet property="oneCup" destination="TgO-ih-Zuq" id="M5L-U4-h64"/>
                         <outlet property="rangeOfGrindLabel" destination="mNN-fD-tSG" id="9WK-n8-K81"/>
+                        <outlet property="slider" destination="Hdl-zk-b7j" id="Fm6-Wn-0wE"/>
                         <outlet property="temperatureLabel" destination="gFJ-4R-baV" id="ORy-bf-MSV"/>
                         <outlet property="threeCups" destination="ddt-1X-Yum" id="ZPK-Nv-gb9"/>
                         <outlet property="timeLabel" destination="508-Ae-Q8E" id="Rn7-mp-KaM"/>
@@ -449,7 +450,7 @@
         <!--Making Coffee View Controller-->
         <scene sceneID="JzC-ir-W1M">
             <objects>
-                <viewController id="S54-hy-U6q" customClass="MakingCoffeeViewController" customModule="CoffeeBee" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="makingCoffeeVC" id="S54-hy-U6q" customClass="MakingCoffeeViewController" customModule="CoffeeBee" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kIa-k6-3xi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

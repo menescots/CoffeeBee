@@ -6,13 +6,25 @@
 //
 
 import UIKit
-
+import AVFoundation
 class MakingCoffeeViewController: UIViewController {
     
-    private var coffees = ["frenchpress", "mokapot", "syphon"]
-    var chuj = [0: UIColor.red, 1: UIColor.gray, 2: UIColor.green]
-    
+    private var coffees = ["frenchpress", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "syphon"]
     private let scrollView = UIScrollView()
+    var coffeeStepInfo: Method?
+    var coffeeToPrepare: CoffeeMethods?
+    var waterAmount: String?
+    var coffeeAmount: String?
+    var WaterTemperature: String?
+    private var coundDownSound: AVAudioPlayer?
+    
+    private let dateFormatter : DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = .pad
+        return formatter
+    }()
+    
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.backgroundColor = UIColor(named: "BackgroundColor")
@@ -22,9 +34,11 @@ class MakingCoffeeViewController: UIViewController {
     private let stepLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.contentMode = .topLeft
+        label.textAlignment = .center
         label.textColor = UIColor(named: "labelColor")
-        label.text = "testesttesttesttesttesttesttesttesttesttesttestestesttesttesttesttesttesttesttesttesttestestesttesttesttesttesttesttesttesttesttestestestttesttesttesttesttesttesttesttest "
+        label.font = .systemFont(ofSize: 22, weight: .light)
+        label.minimumScaleFactor = 0.5
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     private let nextStepButton: UIButton = {
@@ -51,6 +65,8 @@ class MakingCoffeeViewController: UIViewController {
         view.addSubview(scrollView)
         view.addSubview(stepLabel)
         view.addSubview(nextStepButton)
+        changeStepAndNextLabel(stepIndex: 0)
+        
     }
 
     @objc private func pageControlDidChange(_ sender: UIPageControl) {
@@ -75,8 +91,8 @@ class MakingCoffeeViewController: UIViewController {
                                   width: view.frame.size.width,
                                   height: 400)
         stepLabel.frame = CGRect(x: 0,
-                                 y: pageControl.bottom+10,
-                                 width: view.frame.size.width-20,
+                                 y: pageControl.bottom+25,
+                                 width: view.frame.size.width-30,
                                  height: 100)
         stepLabel.center.x = view.center.x
         nextStepButton.frame = CGRect(x: 0,
@@ -88,15 +104,7 @@ class MakingCoffeeViewController: UIViewController {
             configureScrollView()
         }
     }
-//    @IBAction func changePage(_ sender: Any) {
-//        let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
-//                scrollView.setContentOffset(CGPoint(x:x, y:0), animated: true)
-//    }
-//    @IBAction func nextStepButton(_ sender: Any) {
-//        if scrollView.contentOffset.x < self.view.bounds.width * CGFloat(coffees.count - 1) {
-//                scrollView.contentOffset.x +=  self.view.bounds.width
-//            }
-//    }
+
     private func configureScrollView(){
         scrollView.contentSize = CGSize(width: view.frame.size.width*CGFloat((coffees.count)),
                                         height: scrollView.frame.size.height)
@@ -113,10 +121,58 @@ class MakingCoffeeViewController: UIViewController {
             scrollView.addSubview(page)
         }
     }
+    private func changeStepAndNextLabel(stepIndex: Int){
+        guard let coffeeInfo = coffeeStepInfo,
+              let waterAmount = waterAmount,
+              let coffeeAmount = coffeeAmount,
+              let waterTemperature = WaterTemperature,
+              let coffeeGrindSize = coffeeToPrepare?.grindSize else {
+            return
+        }
+        let coffeeSteps = coffeeInfo.steps
+        let stepInfo = coffeeSteps[stepIndex]
+        let stepDesc = stepInfo.step
+        let replacedStep = stepDesc.replacingOccurrences(of: "water_amount", with: waterAmount).replacingOccurrences(of: "coffee_amount", with: coffeeAmount).replacingOccurrences(of: "temperature", with: waterTemperature).replacingOccurrences(of: "grind_size", with: coffeeGrindSize.lowercased())
+        stepLabel.text = replacedStep
+        let timerTime = stepInfo.timer
+        guard let timerTime = timerTime else {
+            return
+        }
+        timmerOccurs(time: TimeInterval(timerTime))
+    }
+    
+    private func timmerOccurs(time: TimeInterval){
+        var timeLeft = time
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            
+            self.nextStepButton.setTitle(self.dateFormatter.string(from: timeLeft), for: .normal)
+            if(timeLeft==0){
+                timer.invalidate()
+                self.nextStepButton.setTitle("Next", for: .normal)
+            }
+            timeLeft -= 1
+        }
+    }
+//    private func playSound(seconds: Int){
+//        if seconds == 3 {
+//
+//            let path = Bundle.main.path(forResource: "countDownSound", ofType: "mp3")!
+//            let url = URL(fileURLWithPath: path)
+//
+//            do {
+//                coundDownSound = try AVAudioPlayer(contentsOf: url)
+//                coundDownSound?.play()
+//            } catch {
+//                print(error)
+//            }
+//        }
+//    }
 }
 
 extension MakingCoffeeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+        changeStepAndNextLabel(stepIndex: pageControl.currentPage)
     }
 }

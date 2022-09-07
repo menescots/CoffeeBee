@@ -11,8 +11,9 @@ import Lottie
 class PreparingForCoffeeVC: UIViewController {
     let step:Float=10
     @IBOutlet var CoffeNameLabel: UILabel!
-    var coffeeToPrepare:CoffeeMethods?
-    
+    @IBOutlet weak var slider: UISlider!
+    var coffeeToPrepare: CoffeeMethods?
+    var coffeeInfo: Method?
     @IBOutlet var waterValueLabel: UILabel!
     @IBOutlet var coffeeValueLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!
@@ -29,12 +30,25 @@ class PreparingForCoffeeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor(named: "BackgroundColor")
         guard let coffeeToPrepare = coffeeToPrepare else {
             return
         }
-        
+        if coffeeToPrepare.name == "Espresso" {
+            slider.maximumValue = 60
+            slider.minimumValue = 30
+            threeCups.isHidden = true
+            fourCups.isHidden = true
+            fiveCups.isHidden = true
+        } else if coffeeToPrepare.name == "AeroPress" {
+
+            slider.isHidden = true
+            oneCup.isHidden = true
+            twoCups.isHidden = true
+            threeCups.isHidden = true
+            fourCups.isHidden = true
+            fiveCups.isHidden = true
+        }
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.unitsStyle = .abbreviated
@@ -83,7 +97,7 @@ class PreparingForCoffeeVC: UIViewController {
         case "Celsius":
             temperatureLabel.text = String("\(coffeeTemperatureInCelsius)C")
         case "Fahrenheit":
-            let temperatureInF = Double(coffeeTemperatureInCelsius) * 1.8 + 32
+            let temperatureInF = Double(coffeeTemperatureInCelsius).celsiusToFahrenheit()
             temperatureLabel.text = String("\(temperatureInF.roundTo(places: 0))F")
         default:
             break
@@ -107,6 +121,17 @@ class PreparingForCoffeeVC: UIViewController {
     }
     
     @IBAction func startButtonTapped(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "makeCoffeeSegue") {
+            let vc = segue.destination as! MakingCoffeeViewController
+            vc.coffeeStepInfo = coffeeInfo
+            vc.waterAmount = waterValueLabel.text
+            vc.coffeeAmount = coffeeValueLabel.text
+            vc.coffeeToPrepare = coffeeToPrepare
+            vc.WaterTemperature = temperatureLabel.text
+        }
     }
     private func highlightNumberOfCups(water: Int){
         

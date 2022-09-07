@@ -8,7 +8,7 @@
 import UIKit
 
 class BrewMethodsViewController: UIViewController {
-
+    var coffeeDesc: String?
     @IBOutlet var collectionView: UICollectionView!
     var coffeeMethods = [CoffeeMethods]()
     
@@ -35,7 +35,6 @@ class BrewMethodsViewController: UIViewController {
     ]
     
     private let coffeeMethodDesc = [
-    "A compact Italian-made eight-sided wonder, the moka pot makes espresso-style coffee without the need for a large, expensive, high-maintenance machine. Invented in 1933 by Italian engineer Alfonso Bialetti.",
     "Turkish coffee is a style of coffee prepared in a cezve using very finely ground coffee beans without filtering. Turkish coffee is a rich, thick, and delightful drink to be enjoyed slowly with good company.",
     "For French press coffee, the grinds stay in the bottom of the beaker throughout the entire process. Because the grinds remain in contact with the coffee, the bean extraction never ends, creating an oily and bold taste.",
     "The Aeropress is a piston-style brewer that forces coffee through a thin paper filter directly into a cup. Aeropress coffee has a clean taste with clearly defined flavor notes thanks to the paper filter that stops any oil and sediment from getting in the cup.",
@@ -50,7 +49,6 @@ class BrewMethodsViewController: UIViewController {
         super.viewDidLoad()
         coffeeMethods.append(contentsOf: [mokaPot, turkishCoffee, frenchPress, aeroPress, syphon, coldBrew, chemex, harioV60, espresso])
     }
-
 }
 
 extension BrewMethodsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -86,8 +84,7 @@ extension BrewMethodsViewController: UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = SelectedCoffeeViewController()
         vc.selectedCoffeeImg = coffeeMethodsImages[indexPath.row]
-        vc.selectedCoffeeDesc = coffeeMethodDesc[indexPath.row]
-        vc.selectedCoffeMethod = coffeeMethods[indexPath.row]
+        vc.selectedCoffeeMethod = coffeeMethods[indexPath.row]
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
     }

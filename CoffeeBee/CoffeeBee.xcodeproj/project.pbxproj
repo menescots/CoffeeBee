@@ -20,8 +20,9 @@
 		7EAD2E9A28B4D1B000EFDDC4 /* CoffeeBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2E9928B4D1B000EFDDC4 /* CoffeeBeeTests.swift */; };
 		7EAD2EA428B4D1B000EFDDC4 /* CoffeeBeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */; };
 		7EAD2EA628B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */; };
-		7ED3FFBB28BE42650012B1F3 /* playAnime.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3FFBA28BE42640012B1F3 /* playAnime.json */; };
 		7ED3FFBD28BF50A00012B1F3 /* MakingCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */; };
+		7ED3FFC128C72BFC0012B1F3 /* methods.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3FFC028C72BFA0012B1F3 /* methods.json */; };
+		7ED3FFC528C8CC1A0012B1F3 /* countDownSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3FFC428C8CC1A0012B1F3 /* countDownSound.mp3 */; };
 		7EEC9AD128BCA78D00B4540A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */; };
 		7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */; };
 		7EF8D4B028B4F4490083133A /* BrewMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */; };
@@ -67,8 +68,9 @@
 		7EAD2E9F28B4D1B000EFDDC4 /* CoffeeBeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITests.swift; sourceTree = "<group>"; };
 		7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7ED3FFBA28BE42640012B1F3 /* playAnime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playAnime.json; sourceTree = "<group>"; };
 		7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingCoffeeViewController.swift; sourceTree = "<group>"; };
+		7ED3FFC028C72BFA0012B1F3 /* methods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = methods.json; sourceTree = "<group>"; };
+		7ED3FFC428C8CC1A0012B1F3 /* countDownSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = countDownSound.mp3; sourceTree = "<group>"; };
 		7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMethodsViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +139,8 @@
 				7EF8D4A928B4DEC80083133A /* Controller */,
 				7EF8D4AA28B4DEE90083133A /* Helpers */,
 				7EAD2E8428B4D1A400EFDDC4 /* SceneDelegate.swift */,
-				7ED3FFBA28BE42640012B1F3 /* playAnime.json */,
+				7ED3FFC428C8CC1A0012B1F3 /* countDownSound.mp3 */,
+				7ED3FFC028C72BFA0012B1F3 /* methods.json */,
 				7EAD2E8B28B4D1AF00EFDDC4 /* Assets.xcassets */,
 				7EAD2E8228B4D1A400EFDDC4 /* AppDelegate.swift */,
 				7EAD2E8828B4D1A400EFDDC4 /* Main.storyboard */,
@@ -334,7 +337,8 @@
 			files = (
 				7EAD2E8F28B4D1AF00EFDDC4 /* LaunchScreen.storyboard in Resources */,
 				7EAD2E8C28B4D1AF00EFDDC4 /* Assets.xcassets in Resources */,
-				7ED3FFBB28BE42650012B1F3 /* playAnime.json in Resources */,
+				7ED3FFC528C8CC1A0012B1F3 /* countDownSound.mp3 in Resources */,
+				7ED3FFC128C72BFC0012B1F3 /* methods.json in Resources */,
 				7EAD2E8A28B4D1A400EFDDC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

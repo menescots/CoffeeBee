@@ -14,3 +14,20 @@ struct CoffeeMethods {
     let time: Double
     let temperatureInC: Int
 }
+struct MethodList: Codable {
+    let methods: [Method]
+}
+
+// MARK: - Method
+struct Method: Codable {
+    let name: String
+    let desc: String
+    let steps: [Step]
+}
+
+// MARK: - Step
+struct Step: Codable {
+    let timer: Int?
+    let step: String
+}
+
