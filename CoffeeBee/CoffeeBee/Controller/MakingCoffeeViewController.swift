@@ -7,9 +7,10 @@
 
 import UIKit
 import AVFoundation
+import Lottie
 class MakingCoffeeViewController: UIViewController {
     
-    private var coffees = ["frenchpress", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "syphon"]
+    private var coffees = ["frenchpress", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "mokapot"]
     private let scrollView = UIScrollView()
     var coffeeStepInfo: Method?
     var coffeeToPrepare: CoffeeMethods?
@@ -17,6 +18,9 @@ class MakingCoffeeViewController: UIViewController {
     var coffeeAmount: String?
     var WaterTemperature: String?
     private var coundDownSound: AVAudioPlayer?
+    
+    private weak var timer: Timer?
+    private var timeLeft = 0
     
     private let dateFormatter : DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -77,9 +81,17 @@ class MakingCoffeeViewController: UIViewController {
     
     @objc private func nextStepButtonTapped(_ sender: UIButton){
         if scrollView.contentOffset.x < self.view.bounds.width * CGFloat(coffees.count-1) {
-                scrollView.contentOffset.x +=  self.view.bounds.width
-            }
+            scrollView.contentOffset.x +=  self.view.bounds.width
+        }
+        
+        
+        if pageControl.currentPage == coffees.count-1 {
+            dismiss(animated: true)
+        } else {
+            timerOccurs()
+        }
     }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         pageControl.frame = CGRect(x: 10,
@@ -134,24 +146,36 @@ class MakingCoffeeViewController: UIViewController {
         let stepDesc = stepInfo.step
         let replacedStep = stepDesc.replacingOccurrences(of: "water_amount", with: waterAmount).replacingOccurrences(of: "coffee_amount", with: coffeeAmount).replacingOccurrences(of: "temperature", with: waterTemperature).replacingOccurrences(of: "grind_size", with: coffeeGrindSize.lowercased())
         stepLabel.text = replacedStep
-        let timerTime = stepInfo.timer
-        guard let timerTime = timerTime else {
+    }
+
+    private func timerOccurs(){
+        guard let coffeeInfo = coffeeStepInfo else {
             return
         }
-        timmerOccurs(time: TimeInterval(timerTime))
-    }
-    
-    private func timmerOccurs(time: TimeInterval){
-        var timeLeft = time
-        
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            
-            self.nextStepButton.setTitle(self.dateFormatter.string(from: timeLeft), for: .normal)
-            if(timeLeft==0){
-                timer.invalidate()
+        let coffeeSteps = coffeeInfo.steps
+        let stepInfo = coffeeSteps[pageControl.currentPage]
+        guard let timerTime = stepInfo.timer else {
+            return
+        }
+        timeLeft = timerTime
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0,
+                                     repeats: true) { [self] timer in
+            self.nextStepButton.setTitle(self.dateFormatter.string(from: TimeInterval(timeLeft)), for: .normal)
+            if timeLeft == 0 {
+                pauseTimer()
                 self.nextStepButton.setTitle("Next", for: .normal)
+            } else {
+                timeLeft -= 1
+                print(timeLeft)
             }
-            timeLeft -= 1
+        }
+        
+    }
+    private func pauseTimer() {
+        if timer != nil {
+           timer!.invalidate()
+           timer = nil
         }
     }
 //    private func playSound(seconds: Int){
@@ -174,5 +198,6 @@ extension MakingCoffeeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         changeStepAndNextLabel(stepIndex: pageControl.currentPage)
+        timerOccurs()
     }
 }

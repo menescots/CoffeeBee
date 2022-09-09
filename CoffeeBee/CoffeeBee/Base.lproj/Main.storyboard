@@ -460,7 +460,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kox-G0-KjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-375.36231884057975" y="2822.5446428571427"/>
+            <point key="canvasLocation" x="481" y="2141"/>
+        </scene>
+        <!--Finished Coffee View Controller-->
+        <scene sceneID="Jvb-8g-J1L">
+            <objects>
+                <viewController storyboardIdentifier="test" id="vXX-cH-htf" customClass="finishedCoffeeViewController" customModule="CoffeeBee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZL-WO-cDb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9Vh-fs-nPF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUd-iY-WUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="2153"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Mv9-Ty-a9y">
@@ -601,6 +616,9 @@
         <namedColor name="yellowText">
             <color red="0.82352941176470584" green="0.68627450980392157" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

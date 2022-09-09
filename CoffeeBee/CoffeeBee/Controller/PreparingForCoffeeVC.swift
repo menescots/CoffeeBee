@@ -41,7 +41,6 @@ class PreparingForCoffeeVC: UIViewController {
             fourCups.isHidden = true
             fiveCups.isHidden = true
         } else if coffeeToPrepare.name == "AeroPress" {
-
             slider.isHidden = true
             oneCup.isHidden = true
             twoCups.isHidden = true
@@ -64,8 +63,18 @@ class PreparingForCoffeeVC: UIViewController {
         methodLabel.text = coffeeToPrepare.name
         rangeOfGrindLabel.text = coffeeToPrepare.grindSize
         timeLabel.text = formattedString
-        calculateTempAndCoffee(water: 250)
-        highlightNumberOfCups(water: 250)
+        
+        //FIXME: to many times calling func
+        if coffeeToPrepare.name == "Espresso" {
+            calculateTempAndCoffee(water: 60)
+            highlightNumberOfCups(water: 60)
+        } else if coffeeToPrepare.name == "AeroPress" {
+            calculateTempAndCoffee(water: 200)
+            highlightNumberOfCups(water: 200)
+        } else {
+            calculateTempAndCoffee(water: 250)
+            highlightNumberOfCups(water: 250)
+        }
     }
     
     @IBAction func sliderValueDidChange(_ sender: UISlider) {

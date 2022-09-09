@@ -13,6 +13,64 @@
       { "timer": null, "step": "Wait couple minutes. You know when it's done when you hear hissing, gurgling sound. Remove Moka pot from the heat." },
       { "timer": null, "step": "Enjoy your coffee." }
     ]
-  }
+  },
+    {
+    "name": "Turkish coffee",
+    "desc": "Turkish coffee is a style of coffee prepared in a cezve using very finely ground coffee beans without filtering. Turkish coffee is a rich, thick, and delightful drink to be enjoyed slowly with good company.",
+    "steps": [
+      { "timer": null, "step": "Pour water_amount water into the cezve or a pot." },
+      { "timer": null, "step": "Grind coffee_amount coffee to grind_size size." },
+      { "timer": 10, "step": "Add ground coffee to water and stir well for 10 sec." },
+      { "timer": null, "step": "Place cezve on the stovetop over medium heat, just before it boils, remove from the heat." },
+      { "timer": null, "step": "Skim off the foam, adding a little to each serving cup." },
+      { "timer": null, "step": "Return the cezve to the heat and let it slowly foam up again." },
+      { "timer": null, "step": "Pour coffee very slowly into the serving cups, wait couple minutes then serve." },
+      { "timer": null, "step": "Enjoy your coffee." }
+    ]
+  },
+    {
+    "name": "French Press",
+    "desc": "For French press coffee, the grinds stay in the bottom of the beaker throughout the entire process. Because the grinds remain in contact with the coffee, the bean extraction never ends, creating an oily and bold taste.",
+    "steps": [
+      { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size." },
+      { "timer": null, "step": "Preheat the press with hot tap water." },
+      { "timer": null, "step": "Add coffee_amount of coffee and pour water_amount of water heated up to temperature." },
+      { "timer": 10, "step": "Stir for 10 seconds." },
+      { "timer": 30, "step": "Let it bloom for 30 seconds." },
+      { "timer": 210, "step": "Add the remaining water and place the lid gently on top of the grounds. Don't plunge just yet. Wait 3min 30sec." },
+      { "timer": null, "step": "Slowly plunge the press down." },
+      { "timer": null, "step": "Enjoy your coffee." }
+    ]
+  },
+      {
+      "name": "AeroPress",
+      "desc": "The Aeropress is a piston-style brewer that forces coffee through a thin paper filter directly into a cup. Aeropress coffee has a clean taste with clearly defined flavor notes thanks to the paper filter that stops any oil and sediment from getting in the cup.",
+      "steps": [
+        { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size." },
+        { "timer": null, "step": "Boil a water up to temperature." },
+        { "timer": null, "step": "Insert the plunger (the inner chamber of your Aeropress) into the outer tube, so the black seal is in line with the number 4. Stand it on end, so the 4 is closest to the table." },
+        { "timer": null, "step": "Fill the tube with your water - so it reaches the bottom of the number 1" },
+        { "timer": 60, "step": "Stir few times and wait one minute. In the meantime prepare your filter paper, by putting it in the filter holder and pouring hot water through to rinse it." },
+        { "timer": null, "step": "Screw it onto your Aeropress" },
+        { "timer": null, "step": "Place your mug upside down on top and carefully flip the whole stack." },
+        { "timer": null, "step": "Carefully push the inner chamber down to brew your coffee." },
+        { "timer": null, "step": "Enjoy your coffee." }
+      ]
+    },
+      {
+      "name": "Syphon",
+      "desc": "Syphon (vacuum pot) coffee is a brewing method that involves a process of mixing coffee with boiling water ascended from the flask through siphonage to extract and filter the coffee.",
+      "steps": [
+        { "timer": null, "step": "After soaking your filter in a warm water bath for at least five minutes, drop it into the bottom of your siphon’s top component, or “hopper,” and hook to the bottom of the hopper’s glass tubing." },
+        { "timer": null, "step": "Fill your siphon’s bottom component, or “bulb,” with water_amount of hot water." },
+        { "timer": null, "step": "Insert the hopper, filter and all, into the bulb. You don't have to press too hard; just make sure it's securely and evenly in place. Position the entire assembly above your heat source." },
+        { "timer": null, "step": "While the water is heating, measure out between coffee_amount of coffee and grind it just little bit finer than you would for regular drip coffee." },
+        { "timer": null, "step": "Once the water has moved into the hopper, turn your heat source down so that the water is about tempterature." },
+        { "timer": 5, "step": "Add your coffee, and gently (but thoroughly) stir it with a bamboo paddle or butter knife for few seconds." },
+        { "timer": 70, "step": "Let the coffee brew, undisturbed, for one minute and 10 seconds." },
+        { "timer": null, "step": "In one brisk motion, remove your siphon from its heat source and give it ten stirs with a bamboo paddle. Your coffee should take another minute or so to draw downward and finally rest in the bulb. You'll know it's ready when a dome of grounds has formed at the top of the filter" },
+        { "timer": null, "step": "Enjoy your coffee." }
+      ]
+    },
 ]
 }

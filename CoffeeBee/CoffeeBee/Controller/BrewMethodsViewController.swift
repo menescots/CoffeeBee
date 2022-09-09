@@ -16,7 +16,7 @@ class BrewMethodsViewController: UIViewController {
     let turkishCoffee = CoffeeMethods(name: "Turkish coffee", waterRatio: 12, grindSize: "Extra-fine", time: 600, temperatureInC: 70)
     let frenchPress = CoffeeMethods(name: "French Press", waterRatio: 15, grindSize: "Coarse", time: 240, temperatureInC: 94)
     let aeroPress = CoffeeMethods(name: "AeroPress", waterRatio: 10, grindSize: "Fine", time: 150, temperatureInC: 90)
-    let syphon = CoffeeMethods(name: "Syphon", waterRatio: 15, grindSize: "Medium", time: 150, temperatureInC: 90)
+    let syphon = CoffeeMethods(name: "Syphon", waterRatio: 15, grindSize: "Medium", time: 150, temperatureInC: 84)
     let coldBrew = CoffeeMethods(name: "Cold Brew", waterRatio: 8, grindSize: "Coarse", time: 57600, temperatureInC: 20)
     let chemex = CoffeeMethods(name: "Chemex", waterRatio: 15, grindSize: "Medium-coarse", time: 600, temperatureInC: 94)
     let harioV60 = CoffeeMethods(name: "Hario V60", waterRatio: 15, grindSize: "Medium-coarse", time: 240, temperatureInC: 92)
@@ -35,9 +35,6 @@ class BrewMethodsViewController: UIViewController {
     ]
     
     private let coffeeMethodDesc = [
-    "Turkish coffee is a style of coffee prepared in a cezve using very finely ground coffee beans without filtering. Turkish coffee is a rich, thick, and delightful drink to be enjoyed slowly with good company.",
-    "For French press coffee, the grinds stay in the bottom of the beaker throughout the entire process. Because the grinds remain in contact with the coffee, the bean extraction never ends, creating an oily and bold taste.",
-    "The Aeropress is a piston-style brewer that forces coffee through a thin paper filter directly into a cup. Aeropress coffee has a clean taste with clearly defined flavor notes thanks to the paper filter that stops any oil and sediment from getting in the cup.",
     "Siphon (vacuum pot) coffee is a brewing method that involves a process of mixing coffee with boiling water ascended from the flask through siphonage to extract and filter the coffee.",
     "Cold-brewed coffee, or cold brew, is coffee made by steeping ground coffee in room-temperature water for several hours, usually 12 to 18 hours or even longer, then straining out the grounds and chilling it before serving it either as-is, over ice, or diluted with water.",
     "Chemex is a pour-over method, which means that the water passes through a bed of coffee and a filter, normally made out of paper. In contrast to say a French press, the Chemex will give you a remarkably clean cup of coffee.",
