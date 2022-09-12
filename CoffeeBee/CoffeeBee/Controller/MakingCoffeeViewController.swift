@@ -18,6 +18,7 @@ class MakingCoffeeViewController: UIViewController {
     var coffeeAmount: String?
     var WaterTemperature: String?
     private var coundDownSound: AVAudioPlayer?
+    private var animationView: AnimationView?
     
     private weak var timer: Timer?
     private var timeLeft = 0
@@ -80,18 +81,40 @@ class MakingCoffeeViewController: UIViewController {
     }
     
     @objc private func nextStepButtonTapped(_ sender: UIButton){
-        if scrollView.contentOffset.x < self.view.bounds.width * CGFloat(coffees.count-1) {
-            scrollView.contentOffset.x +=  self.view.bounds.width
-        }
+        changePageForward()
         
-        
-        if pageControl.currentPage == coffees.count-1 {
-            dismiss(animated: true)
+        if pageControl.currentPage == coffees.count-2 {
+            nextStepButton.setTitle("Finish", for: .normal)
+        } else if pageControl.currentPage == coffees.count-1 {
+            removeSubviews()
+            fireFinishAnimation()
         } else {
+            timer?.invalidate()
             timerOccurs()
         }
     }
+    private func removeSubviews(){
+        view.subviews.forEach({ $0.removeFromSuperview() })
+    }
+    private func fireFinishAnimation() {
+        animationView = .init(name: "coffeeFinish")
+        animationView!.frame = view.bounds
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .playOnce
 
+        animationView!.animationSpeed = 0.5
+        view.addSubview(animationView!)
+        animationView!.play()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            self.dismiss(animated: true)
+        }
+    }
+    private func changePageForward() {
+        if scrollView.contentOffset.x < self.view.bounds.width * CGFloat(coffees.count-1) {
+            scrollView.contentOffset.x +=  self.view.bounds.width
+        }
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         pageControl.frame = CGRect(x: 10,
@@ -155,6 +178,7 @@ class MakingCoffeeViewController: UIViewController {
         let coffeeSteps = coffeeInfo.steps
         let stepInfo = coffeeSteps[pageControl.currentPage]
         guard let timerTime = stepInfo.timer else {
+            nextStepButton.setTitle("Next", for: .normal)
             return
         }
         timeLeft = timerTime
@@ -164,6 +188,7 @@ class MakingCoffeeViewController: UIViewController {
             self.nextStepButton.setTitle(self.dateFormatter.string(from: TimeInterval(timeLeft)), for: .normal)
             if timeLeft == 0 {
                 pauseTimer()
+                changePageForward()
                 self.nextStepButton.setTitle("Next", for: .normal)
             } else {
                 timeLeft -= 1
@@ -178,20 +203,6 @@ class MakingCoffeeViewController: UIViewController {
            timer = nil
         }
     }
-//    private func playSound(seconds: Int){
-//        if seconds == 3 {
-//
-//            let path = Bundle.main.path(forResource: "countDownSound", ofType: "mp3")!
-//            let url = URL(fileURLWithPath: path)
-//
-//            do {
-//                coundDownSound = try AVAudioPlayer(contentsOf: url)
-//                coundDownSound?.play()
-//            } catch {
-//                print(error)
-//            }
-//        }
-//    }
 }
 
 extension MakingCoffeeViewController: UIScrollViewDelegate {

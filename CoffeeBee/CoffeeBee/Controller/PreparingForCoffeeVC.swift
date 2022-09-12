@@ -64,7 +64,6 @@ class PreparingForCoffeeVC: UIViewController {
         rangeOfGrindLabel.text = coffeeToPrepare.grindSize
         timeLabel.text = formattedString
         
-        //FIXME: to many times calling func
         if coffeeToPrepare.name == "Espresso" {
             calculateTempAndCoffee(water: 60)
             highlightNumberOfCups(water: 60)

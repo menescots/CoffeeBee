@@ -33,15 +33,6 @@ class BrewMethodsViewController: UIViewController {
         UIImage(named: "hariov60")!,
         UIImage(named: "espresso")!
     ]
-    
-    private let coffeeMethodDesc = [
-    "Siphon (vacuum pot) coffee is a brewing method that involves a process of mixing coffee with boiling water ascended from the flask through siphonage to extract and filter the coffee.",
-    "Cold-brewed coffee, or cold brew, is coffee made by steeping ground coffee in room-temperature water for several hours, usually 12 to 18 hours or even longer, then straining out the grounds and chilling it before serving it either as-is, over ice, or diluted with water.",
-    "Chemex is a pour-over method, which means that the water passes through a bed of coffee and a filter, normally made out of paper. In contrast to say a French press, the Chemex will give you a remarkably clean cup of coffee.",
-    "The name stems from the shape of the device. It is “V” shaped with angles of 60 degrees. The internal sides also have interior ridges which help with air flow during the brewing method. Filter paper is inserted into the V shape and coffee grounds placed within the filter paper. The brewed coffee then drips into your cup.",
-    "Espresso is a type of coffee. More specifically, it's a method of brewing coffee that uses high water pressure and finely ground beans to make a small, concentrated shot. One of espresso's defining characteristics is a top layer of foam known as the crema. "
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         coffeeMethods.append(contentsOf: [mokaPot, turkishCoffee, frenchPress, aeroPress, syphon, coldBrew, chemex, harioV60, espresso])
