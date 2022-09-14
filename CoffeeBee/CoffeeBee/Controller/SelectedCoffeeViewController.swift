@@ -56,12 +56,26 @@ class SelectedCoffeeViewController: UIViewController {
         view.addSubview(coffeeNameLabel)
         view.addSubview(brewMethodDesc)
         view.addSubview(makeThisCoffeeButton)
+        
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(getInfoAction), for: .touchUpInside)
+        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+        navigationItem.rightBarButtonItem = infoBarButtonItem
+        
         makeThisCoffeeButton.addTarget(self, action: #selector(makeThisCoffeeButtonTapped), for: .touchUpInside)
         if let localData = self.readLocalFile(forName: "methods") {
             self.parse(jsonData: localData)
         }
     }
 
+   @objc private func getInfoAction() {
+        let infoVC = CoffeeInformationVC()
+       guard let coffeeInfo = coffeeInfo else {
+           return
+       }
+       infoVC.websiteToLoad = coffeeInfo.pageURL
+       navigationController?.pushViewController(infoVC, animated: true)
+    }
     private func readLocalFile(forName name: String) -> Data? {
         do {
             if let bundlePath = Bundle.main.path(forResource: name,

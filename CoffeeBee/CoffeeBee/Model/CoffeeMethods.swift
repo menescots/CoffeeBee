@@ -24,6 +24,7 @@ struct Method: Codable {
     let desc: String
     let steps: [Step]
     let pictures: [String]
+    let pageURL: String
 }
 
 // MARK: - Step
