@@ -71,7 +71,6 @@ class MakingCoffeeViewController: UIViewController {
         }
         coffees = coffeeInfo.pictures
         pageControl.numberOfPages = coffees.count
-        print(coffees)
         view.addSubview(pageControl)
         view.addSubview(scrollView)
         view.addSubview(stepLabel)
@@ -90,14 +89,13 @@ class MakingCoffeeViewController: UIViewController {
         changePageForward()
         
         if isItLastPage {
-            print("last")
             removeSubviews()
             fireFinishAnimation()
-            //isItLastPage = false
+            isItLastPage = false
         } else if pageControl.currentPage == coffees.count-1 {
-            print("change to finish")
+            print("\(pageControl.currentPage), \(coffees.count)")
             nextStepButton.setTitle("Finish", for: .normal)
-            //isItLastPage = true
+            isItLastPage = true
         } else {
             timer?.invalidate()
             timerOccurs()
