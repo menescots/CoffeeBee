@@ -10,7 +10,7 @@ import AVFoundation
 import Lottie
 class MakingCoffeeViewController: UIViewController {
     
-    private var coffees = ["frenchpress", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "syphon", "mokapot", "mokapot"]
+    private var coffees = [String]()
     private let scrollView = UIScrollView()
     var coffeeStepInfo: Method?
     var coffeeToPrepare: CoffeeMethods?
@@ -19,7 +19,7 @@ class MakingCoffeeViewController: UIViewController {
     var WaterTemperature: String?
     private var coundDownSound: AVAudioPlayer?
     private var animationView: AnimationView?
-    
+    private var isItLastPage = false
     private weak var timer: Timer?
     private var timeLeft = 0
     
@@ -59,13 +59,19 @@ class MakingCoffeeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "BackgroundColor")
         scrollView.delegate = self
-        pageControl.numberOfPages = coffees.count
         pageControl.addTarget(self,
                               action: #selector(pageControlDidChange),
                               for: .valueChanged)
         nextStepButton.addTarget(self,
                                  action: #selector(nextStepButtonTapped),
                                  for: .touchUpInside)
+        let coffeeInfo = coffeeStepInfo
+        guard let coffeeInfo = coffeeInfo else {
+            return
+        }
+        coffees = coffeeInfo.pictures
+        pageControl.numberOfPages = coffees.count
+        print(coffees)
         view.addSubview(pageControl)
         view.addSubview(scrollView)
         view.addSubview(stepLabel)
@@ -83,11 +89,15 @@ class MakingCoffeeViewController: UIViewController {
     @objc private func nextStepButtonTapped(_ sender: UIButton){
         changePageForward()
         
-        if pageControl.currentPage == coffees.count-2 {
-            nextStepButton.setTitle("Finish", for: .normal)
-        } else if pageControl.currentPage == coffees.count-1 {
+        if isItLastPage {
+            print("last")
             removeSubviews()
             fireFinishAnimation()
+            //isItLastPage = false
+        } else if pageControl.currentPage == coffees.count-1 {
+            print("change to finish")
+            nextStepButton.setTitle("Finish", for: .normal)
+            //isItLastPage = true
         } else {
             timer?.invalidate()
             timerOccurs()
@@ -209,6 +219,11 @@ extension MakingCoffeeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         changeStepAndNextLabel(stepIndex: pageControl.currentPage)
+        if pageControl.currentPage == coffees.count-1 {
+            nextStepButton.setTitle("Finish", for: .normal)
+            //isItLastPage = true
+        }
+        timer?.invalidate()
         timerOccurs()
     }
 }

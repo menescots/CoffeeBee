@@ -1,6 +1,7 @@
 {"methods": [
     {
     "name": "Moka Pot",
+    "pictures": ["preheatwaterstove","grind","bottommoka","funnerempty","fillfunner","mokapot","mokaonfire"],
     "desc": "A compact Italian-made eight-sided wonder, the moka pot makes espresso-style coffee without the need for a large, expensive, high-maintenance machine. Invented in 1933 by Italian engineer Alfonso Bialetti.",
     "steps": [
       { "timer": null, "step": "Preheat water_amount of water to temperature" },
@@ -10,12 +11,12 @@
       { "timer": null, "step": "Fill the funner with the ground coffee, leveling and wiping the funnel's rim clean. Do not tamp the grounds." },
       { "timer": null, "step": "Screw the Moka pot's spouted top on tightly." },
       { "timer": null, "step": "Place the Moka pot on a stove over medium heat. Make sure the flame is not larger than the base of the pot so as not to expose the handle to heat." },
-      { "timer": null, "step": "Wait couple minutes. You know when it's done when you hear hissing, gurgling sound. Remove Moka pot from the heat." },
-      { "timer": null, "step": "Enjoy your coffee." }
+      { "timer": null, "step": "Wait couple minutes. You know when it's done when you hear hissing, gurgling sound. Remove Moka pot from the heat." }
     ]
   },
     {
     "name": "Turkish coffee",
+    "pictures": ["addcoffeeandwater","grind","addcoffeeandwater","cezveonfire","pourcoffee","cezveonfire","pourcoffee"],
     "desc": "Turkish coffee is a style of coffee prepared in a cezve using very finely ground coffee beans without filtering. Turkish coffee is a rich, thick, and delightful drink to be enjoyed slowly with good company.",
     "steps": [
       { "timer": null, "step": "Pour water_amount water into the cezve or a pot." },
@@ -24,12 +25,12 @@
       { "timer": null, "step": "Place cezve on the stovetop over medium heat, just before it boils, remove from the heat." },
       { "timer": null, "step": "Skim off the foam, adding a little to each serving cup." },
       { "timer": null, "step": "Return the cezve to the heat and let it slowly foam up again." },
-      { "timer": null, "step": "Pour coffee very slowly into the serving cups, wait couple minutes then serve." },
-      { "timer": null, "step": "Enjoy your coffee." }
+      { "timer": null, "step": "Pour coffee very slowly into the serving cups, wait couple minutes then serve." }
     ]
   },
     {
     "name": "French Press",
+    "pictures": ["grind","emptyfrench","frenchwithoutpress","stirfrench","bloom","frenchpress","pressdown"],
     "desc": "For French press coffee, the grinds stay in the bottom of the beaker throughout the entire process. Because the grinds remain in contact with the coffee, the bean extraction never ends, creating an oily and bold taste.",
     "steps": [
       { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size." },
@@ -38,27 +39,27 @@
       { "timer": 10, "step": "Stir for 10 seconds." },
       { "timer": 30, "step": "Let it bloom for 30 seconds." },
       { "timer": 210, "step": "Add the remaining water and place the lid gently on top of the grounds. Don't plunge just yet. Wait 3min 30sec." },
-      { "timer": null, "step": "Slowly plunge the press down." },
-      { "timer": null, "step": "Enjoy your coffee." }
+      { "timer": null, "step": "Slowly plunge the press down." }
     ]
   },
       {
       "name": "AeroPress",
+      "pictures": ["grind","preheatwaterstove","aero1","aero2","aero3","aero4","aero5","aero6"],
       "desc": "The Aeropress is a piston-style brewer that forces coffee through a thin paper filter directly into a cup. Aeropress coffee has a clean taste with clearly defined flavor notes thanks to the paper filter that stops any oil and sediment from getting in the cup.",
       "steps": [
         { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size." },
         { "timer": null, "step": "Boil a water up to temperature." },
         { "timer": null, "step": "Insert the plunger (the inner chamber of your Aeropress) into the outer tube, so the black seal is in line with the number 4. Stand it on end, so the 4 is closest to the table." },
-        { "timer": null, "step": "Fill the tube with your water - so it reaches the bottom of the number 1" },
+        { "timer": null, "step": "Add your coffee and fill the tube with your water - so it reaches the bottom of the number 1" },
         { "timer": 60, "step": "Stir few times and wait one minute. In the meantime prepare your filter paper, by putting it in the filter holder and pouring hot water through to rinse it." },
         { "timer": null, "step": "Screw it onto your Aeropress" },
         { "timer": null, "step": "Place your mug upside down on top and carefully flip the whole stack." },
-        { "timer": null, "step": "Carefully push the inner chamber down to brew your coffee." },
-        { "timer": null, "step": "Enjoy your coffee." }
+        { "timer": null, "step": "Carefully push the inner chamber down to brew your coffee." }
       ]
     },
       {
       "name": "Syphon",
+      "pictures": ["hopperwithfilter","bulb","syphononfire1","grind","waterinhopper","hopperwithcoffee","hopperwithcoffee","wait"],
       "desc": "Syphon (vacuum pot) coffee is a brewing method that involves a process of mixing coffee with boiling water ascended from the flask through siphonage to extract and filter the coffee.",
       "steps": [
         { "timer": null, "step": "After soaking your filter in a warm water bath for at least five minutes, drop it into the bottom of your siphon’s top component, or “hopper,” and hook to the bottom of the hopper’s glass tubing." },
@@ -68,23 +69,23 @@
         { "timer": null, "step": "Once the water has moved into the hopper, turn your heat source down so that the water is about tempterature." },
         { "timer": 5, "step": "Add your coffee, and gently (but thoroughly) stir it with a bamboo paddle or butter knife for few seconds." },
         { "timer": 70, "step": "Let the coffee brew, undisturbed, for one minute and 10 seconds." },
-        { "timer": null, "step": "In one brisk motion, remove your siphon from its heat source and give it ten stirs with a bamboo paddle. Your coffee should take another minute or so to draw downward and finally rest in the bulb. You'll know it's ready when a dome of grounds has formed at the top of the filter" },
-        { "timer": null, "step": "Enjoy your coffee." }
+        { "timer": null, "step": "Remove your siphon from its heat source and give it ten stirs with a bamboo paddle. Your coffee should take another minute or so to draw downward and finally rest in the bulb." }
       ]
     },
       {
       "name": "Cold Brew",
+      "pictures": ["grind","waterpot","coffeepot","straincoffee"],
       "desc": "Cold-brewed coffee, or cold brew, is coffee made by steeping ground coffee in room-temperature water for several hours, usually 12 to 18 hours or even longer, then straining out the grounds and chilling it before serving it either as-is, over ice, or diluted with water.",
       "steps": [
         { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size. The grounds should look like coarse cornmeal, not fine powder." },
-        { "timer": null, "step": "To water_amount of temperature filtered water add you coffee. Stir gently with a long-handled spoon to make sure the grounds are thoroughly saturated with water. " },
+        { "timer": null, "step": "To water_amount of temperature filtered water add your coffee. Stir gently with a long-handled spoon to make sure the grounds are thoroughly saturated with water. " },
         { "timer": null, "step": "Cover the jar with a lid or a small plate to protect it from dust and bugs. Let the coffee steep for about 16 hours. The coffee can be left on the counter or refrigerated; steeping time is the same." },
-        { "timer": null, "step": "After this time Strain the coffee. Line a small strainer with cheesecloth or flour sack cloth and place over a large measuring cup or bowl. Pour the coffee through the strainer." },
-        { "timer": null, "step": "Enjoy your coffee." }
+        { "timer": null, "step": "After this time Strain the coffee. Line a small strainer with cheesecloth or flour sack cloth and place over a large measuring cup or bowl. Pour the coffee through the strainer." }
       ]
     },
       {
       "name": "Chemex",
+      "pictures": ["smallfilter","rinsefilter","grind","preheatwaterstove","chemexwowater","stirchemex","chemexwithcoffee"],
       "desc": "Chemex is a pour-over method, which means that the water passes through a bed of coffee and a filter, normally made out of paper. In contrast to say a French press, the Chemex will give you a remarkably clean cup of coffee.",
       "steps": [
         { "timer": null, "step": "Fold the filter paper, and put it into your Chemex with the thicker side toward the spout. It’s best to put the thicker side of the filter across the spout so the paper won’t tear." },
@@ -93,12 +94,12 @@
         { "timer": null, "step": "Preaheat water_amount of water to temperature." },
         { "timer": null, "step": "In circular motion, pour water just to cover up the coffee grounds." },
         { "timer": 30, "step": "Stir to make sure all the grounds are wet, wait 30 seconds." },
-        { "timer": null, "step": "Pour the remaining water in three batches using a circular motion, until you’ve poured a total of water_amount including the bloom." },
-        { "timer": null, "step": "Enjoy your coffee." }
+        { "timer": null, "step": "Pour the remaining water in three batches using a circular motion, until you’ve poured a total of water_amount including the bloom." }
       ]
     },
       {
       "name": "Hario V60",
+      "pictures": ["rinsefilter","grind","preheatwaterstove","hariogwithoutcoffee","hariostir","hariowithcoffee","hariostir"],
       "desc": "The name stems from the shape of the device. It is “V” shaped with angles of 60 degrees. The internal sides also have interior ridges which help with air flow during the brewing method. Filter paper is inserted into the V shape and coffee grounds placed within the filter paper. The brewed coffee then drips into your cup.",
       "steps": [
         { "timer": null, "step": "Put filter paper into your V60, and place it on top of your mug or server. Rinse the paper with hot water, then discard the water." },
@@ -107,19 +108,18 @@
         { "timer": null, "step": "In circular motion, pour water just to cover up the coffee grounds." },
         { "timer": 30, "step": "Stir to make sure all the grounds are wet, wait 30 seconds." },
         { "timer": 210, "step": "Gently pour in more water until you’ve added a total of water_amount. Pour using a circular motion.Pour each new batch of water in gently, trying not to disturb the coffee grounds too much. Aim for a total brew time of 3.5 minutes " },
-        { "timer": null, "step": "Gently stir again once the pour is complete. Stirring will help ensure all the grounds are evenly extracted." },
-        { "timer": null, "step": "Enjoy your coffee." }
+        { "timer": null, "step": "Gently stir again once the pour is complete. Stirring will help ensure all the grounds are evenly extracted." }
       ]
     },
       {
       "name": "Espresso",
+      "pictures": ["grind","portafiltercoffee","tampcoffee","extract","heart"],
       "desc":  "Espresso is a type of coffee. More specifically, it's a method of brewing coffee that uses high water pressure and finely ground beans to make a small, concentrated shot. One of espresso's defining characteristics is a top layer of foam known as the crema.",
       "steps": [
         { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size. Different roasts and brands of beans will require a different grind for your machine. You may need to do a few test runs to get it dialed in just right." },
         { "timer": null, "step": "Add the coffee grounds to the espresso basket (portafilter) until it’s slightly heaping over the top." },
         { "timer": null, "step": "Use the tamper to press the grounds evenly into the portafilter, pressing very firmly until it is fully compressed. Place the portafilter on a folded towel before tamping, or the best tool is a knock box for tamping and discarding used grounds" },
-        { "timer": 30, "step": "Place the portafilter in the espresso machine and press the button to pull the shot. Most home espresso machines have an automatic option for this. A well-pulled espresso shot will last around 25 to 30 seconds." },
-        { "timer": null, "step": "Enjoy your coffee." }
+        { "timer": 30, "step": "Place the portafilter in the espresso machine and press the button to pull the shot. Most home espresso machines have an automatic option for this. A well-pulled espresso shot will last around 25 to 30 seconds." }
       ]
     }
 ]
