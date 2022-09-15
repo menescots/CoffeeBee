@@ -122,7 +122,7 @@
     {
         "pageURL": "en.wikipedia.org/wiki/Espresso",
         "name": "Espresso",
-        "pictures": ["grind","portafiltercoffee","tampcoffee","extract","heart"],
+        "pictures": ["grind","portafiltercoffee","tampcoffee","extract"],
         "desc":  "Espresso is a type of coffee. More specifically, it's a method of brewing coffee that uses high water pressure and finely ground beans to make a small, concentrated shot. One of espresso's defining characteristics is a top layer of foam known as the crema.",
         "steps": [
             { "timer": null, "step": "Grind coffee_amount of coffee to grind_size size. Different roasts and brands of beans will require a different grind for your machine. You may need to do a few test runs to get it dialed in just right." },

@@ -33,6 +33,7 @@ class MakingCoffeeViewController: UIViewController {
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.backgroundColor = UIColor(named: "BackgroundColor")
+        pageControl.pageIndicatorTintColor = UIColor(named: "yellowText")
         pageControl.currentPageIndicatorTintColor = UIColor(named: "labelColor")
         return pageControl
     }()
@@ -81,24 +82,26 @@ class MakingCoffeeViewController: UIViewController {
 
     @objc private func pageControlDidChange(_ sender: UIPageControl) {
         let current = sender.currentPage
-        scrollView.setContentOffset(CGPoint(x: CGFloat(current) * view.frame.size.width, y: 0),
+        scrollView.setContentOffset(CGPoint(x: CGFloat(current) * view.frame.size.width,
+                                            y: 0),
                                     animated: true)
     }
     
     @objc private func nextStepButtonTapped(_ sender: UIButton){
-        changePageForward()
-        
         if isItLastPage {
+            print(isItLastPage)
             removeSubviews()
             fireFinishAnimation()
             isItLastPage = false
-        } else if pageControl.currentPage == coffees.count-1 {
-            print("\(pageControl.currentPage), \(coffees.count)")
+        } else if pageControl.currentPage == coffees.count-2 {
+            changePageForward()
             nextStepButton.setTitle("Finish", for: .normal)
-            isItLastPage = true
+          //  isItLastPage = true
         } else {
             timer?.invalidate()
             timerOccurs()
+            isItLastPage = false
+            changePageForward()
         }
     }
     private func removeSubviews(){
@@ -218,8 +221,10 @@ extension MakingCoffeeViewController: UIScrollViewDelegate {
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         changeStepAndNextLabel(stepIndex: pageControl.currentPage)
         if pageControl.currentPage == coffees.count-1 {
-            nextStepButton.setTitle("Finish", for: .normal)
-            //isItLastPage = true
+            self.nextStepButton.setTitle("Finish", for: .normal)
+            isItLastPage = true
+        } else {
+            isItLastPage = false
         }
         timer?.invalidate()
         timerOccurs()
