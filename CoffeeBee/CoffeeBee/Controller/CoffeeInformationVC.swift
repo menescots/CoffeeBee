@@ -7,17 +7,22 @@
 import UIKit
 import WebKit
 
-class CoffeeInformationVC: UIViewController, WKNavigationDelegate {
+class CoffeeInformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
     var websiteToLoad: String?
     
     override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
+          let webConfiguration = WKWebViewConfiguration()
+          webView = WKWebView(frame: .zero, configuration: webConfiguration)
+          webView.uiDelegate = self
+          view = webView
+      }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        navigationController?.isToolbarHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         progressView = UIProgressView(progressViewStyle: .default)
@@ -34,19 +39,12 @@ class CoffeeInformationVC: UIViewController, WKNavigationDelegate {
         guard let websiteToLoad = websiteToLoad else {
             return
         }
-
-        let url = URL(string: "https://" + websiteToLoad)!
-        webView.load(URLRequest(url: url))
+        if let url = URL(string: "https://" + websiteToLoad) {
+            let request = URLRequest(url: url)
+            webView.load(request)
+        }
         webView.allowsBackForwardNavigationGestures = true
-        
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        
-        
-    }
-
-    func openPage(action: UIAlertAction) {
-        let url = URL(string: "https://" + action.title!)!
-        webView.load(URLRequest(url: url))
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {

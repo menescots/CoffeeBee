@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59EE2E6DF27AEAA393FD4AED /* Pods_CoffeeBee_CoffeeBeeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEB92938F51C8B9244CB83B /* Pods_CoffeeBee_CoffeeBeeUITests.framework */; };
 		7E6045FD28B61CF200E3D044 /* SelectedCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6045FC28B61CF100E3D044 /* SelectedCoffeeViewController.swift */; };
 		7E60460128B65FBC00E3D044 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60460028B65FBB00E3D044 /* Extensions.swift */; };
 		7E60460528B788E300E3D044 /* PreparingForCoffeeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60460428B788E300E3D044 /* PreparingForCoffeeVC.swift */; };
@@ -17,29 +16,20 @@
 		7EAD2E8A28B4D1A400EFDDC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EAD2E8828B4D1A400EFDDC4 /* Main.storyboard */; };
 		7EAD2E8C28B4D1AF00EFDDC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EAD2E8B28B4D1AF00EFDDC4 /* Assets.xcassets */; };
 		7EAD2E8F28B4D1AF00EFDDC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EAD2E8D28B4D1AF00EFDDC4 /* LaunchScreen.storyboard */; };
-		7EAD2E9A28B4D1B000EFDDC4 /* CoffeeBeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2E9928B4D1B000EFDDC4 /* CoffeeBeeTests.swift */; };
-		7EAD2EA428B4D1B000EFDDC4 /* CoffeeBeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */; };
-		7EAD2EA628B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */; };
 		7ED3FFBD28BF50A00012B1F3 /* MakingCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */; };
 		7ED3FFC128C72BFC0012B1F3 /* methods.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3FFC028C72BFA0012B1F3 /* methods.json */; };
 		7ED3FFC728C9DB9A0012B1F3 /* coffeeFinish.json in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3FFC628C9DB990012B1F3 /* coffeeFinish.json */; };
 		7ED3FFCB28D1CC6D0012B1F3 /* CoffeeInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3FFCA28D1CC6C0012B1F3 /* CoffeeInformationVC.swift */; };
+		7ED3FFD828D1FB240012B1F3 /* CoffeeBeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3FFD728D1FB240012B1F3 /* CoffeeBeeUITests.swift */; };
+		7ED3FFDA28D1FB240012B1F3 /* CoffeeBeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3FFD928D1FB240012B1F3 /* CoffeeBeeUITestsLaunchTests.swift */; };
 		7EEC9AD128BCA78D00B4540A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */; };
 		7EF8D4AE28B4F05E0083133A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */; };
 		7EF8D4B028B4F4490083133A /* BrewMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */; };
-		85829336AEB7D308C413B25E /* Pods_CoffeeBeeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD5CBE46F4CF7EDD31766E0 /* Pods_CoffeeBeeTests.framework */; };
 		FEED1AEFBF0A60B8F54D6B6C /* Pods_CoffeeBee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5202B8109A7F0F86905C968 /* Pods_CoffeeBee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7EAD2E9628B4D1AF00EFDDC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7EAD2E7728B4D1A400EFDDC4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7EAD2E7E28B4D1A400EFDDC4;
-			remoteInfo = CoffeeBee;
-		};
-		7EAD2EA028B4D1B000EFDDC4 /* PBXContainerItemProxy */ = {
+		7ED3FFDB28D1FB240012B1F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7EAD2E7728B4D1A400EFDDC4 /* Project object */;
 			proxyType = 1;
@@ -64,15 +54,13 @@
 		7EAD2E8B28B4D1AF00EFDDC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EAD2E8E28B4D1AF00EFDDC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EAD2E9028B4D1AF00EFDDC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EAD2E9528B4D1AF00EFDDC4 /* CoffeeBeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EAD2E9928B4D1B000EFDDC4 /* CoffeeBeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeTests.swift; sourceTree = "<group>"; };
-		7EAD2E9F28B4D1B000EFDDC4 /* CoffeeBeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITests.swift; sourceTree = "<group>"; };
-		7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7ED3FFBC28BF509F0012B1F3 /* MakingCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingCoffeeViewController.swift; sourceTree = "<group>"; };
 		7ED3FFC028C72BFA0012B1F3 /* methods.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = methods.json; sourceTree = "<group>"; };
 		7ED3FFC628C9DB990012B1F3 /* coffeeFinish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffeeFinish.json; sourceTree = "<group>"; };
 		7ED3FFCA28D1CC6C0012B1F3 /* CoffeeInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeInformationVC.swift; sourceTree = "<group>"; };
+		7ED3FFD528D1FB240012B1F3 /* CoffeeBeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeBeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ED3FFD728D1FB240012B1F3 /* CoffeeBeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITests.swift; sourceTree = "<group>"; };
+		7ED3FFD928D1FB240012B1F3 /* CoffeeBeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7EEC9AD028BCA78D00B4540A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7EF8D4AD28B4F05E0083133A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7EF8D4AF28B4F4490083133A /* BrewMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMethodsViewController.swift; sourceTree = "<group>"; };
@@ -92,19 +80,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EAD2E9228B4D1AF00EFDDC4 /* Frameworks */ = {
+		7ED3FFD228D1FB240012B1F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85829336AEB7D308C413B25E /* Pods_CoffeeBeeTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7EAD2E9C28B4D1B000EFDDC4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59EE2E6DF27AEAA393FD4AED /* Pods_CoffeeBee_CoffeeBeeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				7EAD2E8128B4D1A400EFDDC4 /* CoffeeBee */,
-				7EAD2E9828B4D1B000EFDDC4 /* CoffeeBeeTests */,
-				7EAD2EA228B4D1B000EFDDC4 /* CoffeeBeeUITests */,
+				7ED3FFD628D1FB240012B1F3 /* CoffeeBeeUITests */,
 				7EAD2E8028B4D1A400EFDDC4 /* Products */,
 				9C4B31AF467B9CAE77A086C2 /* Pods */,
 				A40A6FEB57AD526C2879529D /* Frameworks */,
@@ -127,8 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				7EAD2E7F28B4D1A400EFDDC4 /* CoffeeBee.app */,
-				7EAD2E9528B4D1AF00EFDDC4 /* CoffeeBeeTests.xctest */,
-				7EAD2E9F28B4D1B000EFDDC4 /* CoffeeBeeUITests.xctest */,
+				7ED3FFD528D1FB240012B1F3 /* CoffeeBeeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,19 +129,11 @@
 			path = CoffeeBee;
 			sourceTree = "<group>";
 		};
-		7EAD2E9828B4D1B000EFDDC4 /* CoffeeBeeTests */ = {
+		7ED3FFD628D1FB240012B1F3 /* CoffeeBeeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7EAD2E9928B4D1B000EFDDC4 /* CoffeeBeeTests.swift */,
-			);
-			path = CoffeeBeeTests;
-			sourceTree = "<group>";
-		};
-		7EAD2EA228B4D1B000EFDDC4 /* CoffeeBeeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7EAD2EA328B4D1B000EFDDC4 /* CoffeeBeeUITests.swift */,
-				7EAD2EA528B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift */,
+				7ED3FFD728D1FB240012B1F3 /* CoffeeBeeUITests.swift */,
+				7ED3FFD928D1FB240012B1F3 /* CoffeeBeeUITestsLaunchTests.swift */,
 			);
 			path = CoffeeBeeUITests;
 			sourceTree = "<group>";
@@ -251,43 +220,22 @@
 			productReference = 7EAD2E7F28B4D1A400EFDDC4 /* CoffeeBee.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7EAD2E9428B4D1AF00EFDDC4 /* CoffeeBeeTests */ = {
+		7ED3FFD428D1FB240012B1F3 /* CoffeeBeeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EAD2EAC28B4D1B000EFDDC4 /* Build configuration list for PBXNativeTarget "CoffeeBeeTests" */;
+			buildConfigurationList = 7ED3FFDD28D1FB240012B1F3 /* Build configuration list for PBXNativeTarget "CoffeeBeeUITests" */;
 			buildPhases = (
-				7D8FE23D53BDAFC8B5ABE212 /* [CP] Check Pods Manifest.lock */,
-				7EAD2E9128B4D1AF00EFDDC4 /* Sources */,
-				7EAD2E9228B4D1AF00EFDDC4 /* Frameworks */,
-				7EAD2E9328B4D1AF00EFDDC4 /* Resources */,
+				7ED3FFD128D1FB240012B1F3 /* Sources */,
+				7ED3FFD228D1FB240012B1F3 /* Frameworks */,
+				7ED3FFD328D1FB240012B1F3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7EAD2E9728B4D1AF00EFDDC4 /* PBXTargetDependency */,
-			);
-			name = CoffeeBeeTests;
-			productName = CoffeeBeeTests;
-			productReference = 7EAD2E9528B4D1AF00EFDDC4 /* CoffeeBeeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7EAD2E9E28B4D1B000EFDDC4 /* CoffeeBeeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7EAD2EAF28B4D1B000EFDDC4 /* Build configuration list for PBXNativeTarget "CoffeeBeeUITests" */;
-			buildPhases = (
-				023568367F411A529B0BA4A1 /* [CP] Check Pods Manifest.lock */,
-				7EAD2E9B28B4D1B000EFDDC4 /* Sources */,
-				7EAD2E9C28B4D1B000EFDDC4 /* Frameworks */,
-				7EAD2E9D28B4D1B000EFDDC4 /* Resources */,
-				A552B7BE1524E0F0B3CF6259 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7EAD2EA128B4D1B000EFDDC4 /* PBXTargetDependency */,
+				7ED3FFDC28D1FB240012B1F3 /* PBXTargetDependency */,
 			);
 			name = CoffeeBeeUITests;
 			productName = CoffeeBeeUITests;
-			productReference = 7EAD2E9F28B4D1B000EFDDC4 /* CoffeeBeeUITests.xctest */;
+			productReference = 7ED3FFD528D1FB240012B1F3 /* CoffeeBeeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -303,11 +251,7 @@
 					7EAD2E7E28B4D1A400EFDDC4 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					7EAD2E9428B4D1AF00EFDDC4 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 7EAD2E7E28B4D1A400EFDDC4;
-					};
-					7EAD2E9E28B4D1B000EFDDC4 = {
+					7ED3FFD428D1FB240012B1F3 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 7EAD2E7E28B4D1A400EFDDC4;
 					};
@@ -327,8 +271,7 @@
 			projectRoot = "";
 			targets = (
 				7EAD2E7E28B4D1A400EFDDC4 /* CoffeeBee */,
-				7EAD2E9428B4D1AF00EFDDC4 /* CoffeeBeeTests */,
-				7EAD2E9E28B4D1B000EFDDC4 /* CoffeeBeeUITests */,
+				7ED3FFD428D1FB240012B1F3 /* CoffeeBeeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -346,14 +289,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EAD2E9328B4D1AF00EFDDC4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7EAD2E9D28B4D1B000EFDDC4 /* Resources */ = {
+		7ED3FFD328D1FB240012B1F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,67 +299,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		023568367F411A529B0BA4A1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoffeeBee-CoffeeBeeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D8FE23D53BDAFC8B5ABE212 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoffeeBeeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A552B7BE1524E0F0B3CF6259 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoffeeBee-CoffeeBeeUITests/Pods-CoffeeBee-CoffeeBeeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoffeeBee-CoffeeBeeUITests/Pods-CoffeeBee-CoffeeBeeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoffeeBee-CoffeeBeeUITests/Pods-CoffeeBee-CoffeeBeeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B0A338FB0CDE6C24EE23C537 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,35 +359,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EAD2E9128B4D1AF00EFDDC4 /* Sources */ = {
+		7ED3FFD128D1FB240012B1F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EAD2E9A28B4D1B000EFDDC4 /* CoffeeBeeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7EAD2E9B28B4D1B000EFDDC4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7EAD2EA428B4D1B000EFDDC4 /* CoffeeBeeUITests.swift in Sources */,
-				7EAD2EA628B4D1B000EFDDC4 /* CoffeeBeeUITestsLaunchTests.swift in Sources */,
+				7ED3FFD828D1FB240012B1F3 /* CoffeeBeeUITests.swift in Sources */,
+				7ED3FFDA28D1FB240012B1F3 /* CoffeeBeeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7EAD2E9728B4D1AF00EFDDC4 /* PBXTargetDependency */ = {
+		7ED3FFDC28D1FB240012B1F3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7EAD2E7E28B4D1A400EFDDC4 /* CoffeeBee */;
-			targetProxy = 7EAD2E9628B4D1AF00EFDDC4 /* PBXContainerItemProxy */;
-		};
-		7EAD2EA128B4D1B000EFDDC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7EAD2E7E28B4D1A400EFDDC4 /* CoffeeBee */;
-			targetProxy = 7EAD2EA028B4D1B000EFDDC4 /* PBXContainerItemProxy */;
+			targetProxy = 7ED3FFDB28D1FB240012B1F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -710,53 +572,9 @@
 			};
 			name = Release;
 		};
-		7EAD2EAD28B4D1B000EFDDC4 /* Debug */ = {
+		7ED3FFDE28D1FB240012B1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85A406876B171A35CEBD19ED /* Pods-CoffeeBeeTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WD66NF7UM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MenesAgata.CoffeeBeeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeBee.app/CoffeeBee";
-			};
-			name = Debug;
-		};
-		7EAD2EAE28B4D1B000EFDDC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64E7DDECCFB69229D2E54D01 /* Pods-CoffeeBeeTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WD66NF7UM5;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MenesAgata.CoffeeBeeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeBee.app/CoffeeBee";
-			};
-			name = Release;
-		};
-		7EAD2EB028B4D1B000EFDDC4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 041DB92764C0DC011641D7AB /* Pods-CoffeeBee-CoffeeBeeUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WD66NF7UM5;
@@ -771,11 +589,9 @@
 			};
 			name = Debug;
 		};
-		7EAD2EB128B4D1B000EFDDC4 /* Release */ = {
+		7ED3FFDF28D1FB240012B1F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCE1176334C45DFADE859C7A /* Pods-CoffeeBee-CoffeeBeeUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WD66NF7UM5;
@@ -811,20 +627,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EAD2EAC28B4D1B000EFDDC4 /* Build configuration list for PBXNativeTarget "CoffeeBeeTests" */ = {
+		7ED3FFDD28D1FB240012B1F3 /* Build configuration list for PBXNativeTarget "CoffeeBeeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EAD2EAD28B4D1B000EFDDC4 /* Debug */,
-				7EAD2EAE28B4D1B000EFDDC4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7EAD2EAF28B4D1B000EFDDC4 /* Build configuration list for PBXNativeTarget "CoffeeBeeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7EAD2EB028B4D1B000EFDDC4 /* Debug */,
-				7EAD2EB128B4D1B000EFDDC4 /* Release */,
+				7ED3FFDE28D1FB240012B1F3 /* Debug */,
+				7ED3FFDF28D1FB240012B1F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
