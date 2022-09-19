@@ -80,7 +80,6 @@ class PreparingForCoffeeVC: UIViewController {
         let roundedStepValue = round(sender.value / step) * step
         sender.value = roundedStepValue
         let intSliderValue = Int(sender.value)
-        print(sender.value)
         calculateTempAndCoffee(water: intSliderValue)
         highlightNumberOfCups(water: intSliderValue)
     }

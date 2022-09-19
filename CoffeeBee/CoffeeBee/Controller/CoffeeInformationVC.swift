@@ -43,6 +43,8 @@ class CoffeeInformationVC: UIViewController, WKNavigationDelegate, WKUIDelegate 
             let request = URLRequest(url: url)
             webView.load(request)
         }
+        webView.isOpaque = false
+        webView.backgroundColor = UIColor(named: "BackgroundColor")
         webView.allowsBackForwardNavigationGestures = true
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }

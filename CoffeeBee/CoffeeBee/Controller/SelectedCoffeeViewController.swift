@@ -104,7 +104,6 @@ class SelectedCoffeeViewController: UIViewController {
         }
     }
     @objc private func makeThisCoffeeButtonTapped() {
-        print("siema")
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "preapreCoffeeVc") as! PreparingForCoffeeVC
         vc.hidesBottomBarWhenPushed = true

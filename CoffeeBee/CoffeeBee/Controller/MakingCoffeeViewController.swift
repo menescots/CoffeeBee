@@ -89,14 +89,12 @@ class MakingCoffeeViewController: UIViewController {
     
     @objc private func nextStepButtonTapped(_ sender: UIButton){
         if isItLastPage {
-            print(isItLastPage)
             removeSubviews()
             fireFinishAnimation()
             isItLastPage = false
         } else if pageControl.currentPage == coffees.count-2 {
             changePageForward()
             nextStepButton.setTitle("Finish", for: .normal)
-          //  isItLastPage = true
         } else {
             timer?.invalidate()
             timerOccurs()
@@ -203,7 +201,6 @@ class MakingCoffeeViewController: UIViewController {
                 self.nextStepButton.setTitle("Next", for: .normal)
             } else {
                 timeLeft -= 1
-                print(timeLeft)
             }
         }
         
