@@ -186,7 +186,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="h2u-pk-NEP">
-                                <rect key="frame" x="31.5" y="255" width="352" height="80"/>
+                                <rect key="frame" x="31.5" y="211" width="352" height="80"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-WG-Gwa">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -200,7 +200,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="eF9-DO-Ycw">
-                                <rect key="frame" x="53" y="108" width="292" height="90.5"/>
+                                <rect key="frame" x="53" y="64" width="292" height="90.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Art-K4-eFc">
                                         <rect key="frame" x="113" y="0.0" width="66" height="32.5"/>
@@ -221,7 +221,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="w6v-Bh-ykn">
-                                <rect key="frame" x="36.5" y="350" width="342.5" height="17"/>
+                                <rect key="frame" x="36.5" y="306" width="342.5" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPh-82-aZk">
                                         <rect key="frame" x="0.0" y="0.0" width="81.5" height="17"/>
@@ -244,7 +244,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wCc-Ky-LWJ">
-                                <rect key="frame" x="65" y="202" width="275.5" height="23"/>
+                                <rect key="frame" x="65" y="158" width="275.5" height="23"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgO-ih-Zuq">
                                         <rect key="frame" x="0.0" y="0.0" width="7.5" height="23"/>
@@ -279,7 +279,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eog-Qg-e7K">
-                                <rect key="frame" x="10" y="375" width="395.5" height="23"/>
+                                <rect key="frame" x="10" y="331" width="395.5" height="23"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="250" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQX-nU-Jb0">
                                         <rect key="frame" x="0.0" y="0.0" width="128.5" height="23"/>
@@ -302,7 +302,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-b4-AiH">
-                                <rect key="frame" x="35" y="480" width="344" height="89.5"/>
+                                <rect key="frame" x="35" y="436" width="344" height="89.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DBf-iK-1IW">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="89.5"/>
@@ -449,7 +449,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Mv9-Ty-a9y">
             <objects>
-                <tabBarController id="puI-D3-zbi" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="InitialStoryboard" id="puI-D3-zbi" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="4G1-Oy-3cI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -523,24 +523,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-yI-8h2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="510" y="694"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Phr-gv-fad">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nzu-UZ-h9A" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="syU-Wi-AUO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="1gY-Db-D2O" kind="relationship" relationship="rootViewController" id="5Fd-6S-OIM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BNE-lN-qGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1269.5652173913045" y="2140.8482142857142"/>
         </scene>
     </scenes>
     <color key="tintColor" name="labelColor"/>

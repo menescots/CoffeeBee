@@ -299,7 +299,7 @@
 		0C15FBD79CAA6FE25EEDDAF823E5B377 /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Sources/Private/Model/Objects/Transform.swift; sourceTree = "<group>"; };
 		0E6864A519D2CB3EBCBB7D1E316E102B /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		0F129D3F1405358DABF11550AD43F605 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = Sources/Private/Model/Layers/LayerModel.swift; sourceTree = "<group>"; };
-		0FB114E27F8414106022220B5B533895 /* MagicTimer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MagicTimer; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10594512E829538AE58F517DEF388FAE /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationCacheProvider.swift; path = Sources/Public/AnimationCache/AnimationCacheProvider.swift; sourceTree = "<group>"; };
 		11429A8CCF6CB65FD526F1B667D542C2 /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = Sources/Public/Keyframes/Interpolatable.swift; sourceTree = "<group>"; };
 		12CE60285D8BAA651B386F22498FF8A9 /* LayerProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerProperty.swift; path = Sources/Private/CoreAnimation/Animations/LayerProperty.swift; sourceTree = "<group>"; };
@@ -365,7 +365,7 @@
 		4EC3CCD9FF74D79A849D064BFB1A7DB3 /* AnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationView.swift; path = Sources/Public/Animation/AnimationView.swift; sourceTree = "<group>"; };
 		4F7C0407D43988DCFB66B5E60CB15A29 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSliderHelper.swift; path = HGCircularSlider/Classes/CircularSliderHelper.swift; sourceTree = "<group>"; };
 		50D69FC5E27FBDA28917A1E76DD5BF74 /* AnimationViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewBase.swift; path = Sources/Public/iOS/AnimationViewBase.swift; sourceTree = "<group>"; };
-		51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "lottie-ios"; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51D313D8116F697F3BD713FCA341F008 /* GradientFillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/RenderNodes/GradientFillNode.swift; sourceTree = "<group>"; };
 		522B0CB2A3F61C7153FCDEBA840A4EE2 /* UIFont+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "Sources/MagicTimer/UIFont+Extension.swift"; sourceTree = "<group>"; };
 		5552D13FCF3E8E362B7901B416D4C471 /* ShapeTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeTransform.swift; path = Sources/Private/Model/ShapeItems/ShapeTransform.swift; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 		97AF1C61A522F062739FD6EFE0C45D53 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = Sources/Private/Model/Assets/ImageAsset.swift; sourceTree = "<group>"; };
 		9A0549A2654CFBE694347C60C9538862 /* Pods-CoffeeBee-CoffeeBeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeeBee-CoffeeBeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9ABA1C2D77E3AB69BD24975F9F761A03 /* KeyframeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeExtensions.swift; path = Sources/Private/Utility/Interpolatable/KeyframeExtensions.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DBA57C6F6322E644D635A9006B2D110 /* Pods-CoffeeBee-CoffeeBeeUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeeBee-CoffeeBeeUITests-Info.plist"; sourceTree = "<group>"; };
 		9DE5646BCE53A50D4D83A6D60CD91C1D /* Glyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = Sources/Private/Model/Text/Glyph.swift; sourceTree = "<group>"; };
 		9E282494B4D940722CF40B11663DDCD7 /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayerModel.swift; path = Sources/Private/Model/Layers/TextLayerModel.swift; sourceTree = "<group>"; };
@@ -503,7 +503,7 @@
 		DA17607797CE25DCE49D865B50E36135 /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = Sources/Private/Utility/Debugging/AnimatorNodeDebugging.swift; sourceTree = "<group>"; };
 		DA370F206975B190AE7AEBEF99D37DB0 /* MGLogable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGLogable.swift; path = Sources/MagicTimer/MGLogable.swift; sourceTree = "<group>"; };
 		DABBC529E35825D2B853674BA2AC8145 /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = Sources/Private/MainThread/LayerContainers/Utility/LayerTextProvider.swift; sourceTree = "<group>"; };
-		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HGCircularSlider; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC6E5027DAC27CB7762BC26E423F1EC /* OpacityAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpacityAnimation.swift; path = Sources/Private/CoreAnimation/Animations/OpacityAnimation.swift; sourceTree = "<group>"; };
 		DD396F63DCF977C425582DF08B762993 /* CAAnimation+TimingConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAAnimation+TimingConfiguration.swift"; path = "Sources/Private/CoreAnimation/Animations/CAAnimation+TimingConfiguration.swift"; sourceTree = "<group>"; };
 		DFEC2D099C3AED58430EC53A16DC51BA /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = Sources/Private/Utility/Primitives/PathElement.swift; sourceTree = "<group>"; };
@@ -780,7 +780,6 @@
 				9F9ACD9D563DDE242F19A0E43674ED96 /* VisibilityAnimation.swift */,
 				2D297602D5E697B9416996BDEAD1A8D0 /* Support Files */,
 			);
-			name = "lottie-ios";
 			path = "lottie-ios";
 			sourceTree = "<group>";
 		};
@@ -794,7 +793,6 @@
 				A2B5BC0E114EB1B619A5EB63E27765ED /* RangeCircularSlider.swift */,
 				82482904AEE7655CD11073124F5D6188 /* Support Files */,
 			);
-			name = HGCircularSlider;
 			path = HGCircularSlider;
 			sourceTree = "<group>";
 		};
@@ -816,9 +814,9 @@
 		5128EFB5418AD4A8893D3B9AC1DD5732 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */,
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
-				0FB114E27F8414106022220B5B533895 /* MagicTimer */,
+				DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
+				0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */,
 				45101FD179C3CC3FB6889B9E7FD4B8C3 /* Pods-CoffeeBee */,
 				177874E64F815B003E68EFF8FA89E9CB /* Pods-CoffeeBee-CoffeeBeeUITests */,
 				1ED18DB44D627BBED62547BE1FFE10E9 /* Pods-CoffeeBeeTests */,
@@ -870,7 +868,6 @@
 				522B0CB2A3F61C7153FCDEBA840A4EE2 /* UIFont+Extension.swift */,
 				5AA052C4C866B1231381B9DEB71793DA /* Support Files */,
 			);
-			name = MagicTimer;
 			path = MagicTimer;
 			sourceTree = "<group>";
 		};
@@ -1067,7 +1064,7 @@
 			);
 			name = "lottie-ios";
 			productName = Lottie;
-			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */;
+			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */ = {
@@ -1085,7 +1082,7 @@
 			);
 			name = HGCircularSlider;
 			productName = HGCircularSlider;
-			productReference = DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */;
+			productReference = DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9A2AFD30069CA32CD2E72E7D9D0E0097 /* MagicTimer */ = {
@@ -1103,7 +1100,7 @@
 			);
 			name = MagicTimer;
 			productName = MagicTimer;
-			productReference = 0FB114E27F8414106022220B5B533895 /* MagicTimer */;
+			productReference = 0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C8181BD79DDFC64663962367023E34F4 /* Pods-CoffeeBee */ = {
@@ -1155,7 +1152,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1340;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -1701,7 +1698,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1849,7 +1846,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MagicTimer/MagicTimer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MagicTimer/MagicTimer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1884,7 +1881,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1919,7 +1916,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1954,7 +1951,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2027,7 +2024,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MagicTimer/MagicTimer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MagicTimer/MagicTimer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
