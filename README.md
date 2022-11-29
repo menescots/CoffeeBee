@@ -63,4 +63,4 @@ Run the app (⌘+R) and test it.
 
 ## License
 
-Chatter is under MIT license. See the [LICENSE](LICENSE) file for more info.
+Chatter is under MIT license. See the [LICENSE](LICENSE.md) file for more info.
